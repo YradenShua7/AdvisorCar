@@ -1,328 +1,697 @@
 <!DOCTYPE html>
-
-<html class="dark" dir="rtl" lang="he"><head>
+<html class="dark" dir="rtl" lang="he">
+<head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>אור זגורי - קנייה ומכירת רכבי יוקרה</title>
-<meta name="description" content="אור זגורי - ייעוץ מקצועי לקנייה ומכירת רכבי יוקרה. חיסכון בכאבי הראש ובזמן, וקבלת המחיר הכי טוב."/>
-<meta property="og:title" content="אור זגורי - קנייה ומכירת רכבי יוקרה"/>
-<meta property="og:description" content="ייעוץ מקצועי לקנייה ומכירת רכבי יוקרה - חיסכון בכאבי ראש ובזמן, המחיר הכי טוב."/>
+<title>אור זגורי | ליווי בקנייה ומכירה של רכב — 0% עמלה למוכר</title>
+<meta name="description" content="אור זגורי מלווה אותך בקנייה ומכירה של רכב בישראל: משא ומתן מול מגרשים ויבואנים, בדיקה לפני קנייה, מכירה ב-AS-IS ללא עמלה למוכר. ייעוץ ראשוני ללא התחייבות."/>
+<meta name="robots" content="index, follow"/>
+<meta name="author" content="אור זגורי"/>
+<meta name="theme-color" content="#0b1326"/>
+<meta property="og:title" content="אור זגורי | ליווי בקנייה ומכירה של רכב"/>
+<meta property="og:description" content="ליווי מקצועי בקנייה ומכירה של רכב — משא ומתן, בדיקות, וסגירת עסקה בראש שקט. 0% עמלה למוכר."/>
 <meta property="og:type" content="website"/>
 <meta property="og:locale" content="he_IL"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=JetBrains+Mono:wght@500&amp;family=Manrope:wght@400;600&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-        tailwind.config = {
-          darkMode: "class",
-          theme: {
-            extend: {
-              "colors": {
-                      "on-primary-fixed": "#210f48",
-                      "on-secondary-container": "#00424e",
-                      "tertiary-container": "#bcc7de",
-                      "surface-container-highest": "#2d3449",
-                      "on-background": "#dbe2fd",
-                      "surface": "#0b1326",
-                      "surface-container": "#171f33",
-                      "on-error": "#690005",
-                      "surface-container-lowest": "#060d20",
-                      "on-error-container": "#ffdad6",
-                      "on-secondary-fixed": "#001f26",
-                      "tertiary": "#d8e3fb",
-                      "on-secondary-fixed-variant": "#004e5c",
-                      "on-tertiary-fixed": "#111c2d",
-                      "primary-fixed-dim": "#d0bcff",
-                      "secondary-fixed-dim": "#4cd7f6",
-                      "background": "#0b1326",
-                      "surface-dim": "#0b1326",
-                      "tertiary-fixed-dim": "#bcc7de",
-                      "surface-variant": "#2d3449",
-                      "secondary-fixed": "#acedff",
-                      "tertiary-fixed": "#d8e3fa",
-                      "on-surface": "#dbe2fd",
-                      "electric-violet": "#d0bcff",
-                      "error": "#ffb4ab",
-                      "primary-container": "#d0bcff",
-                      "on-secondary": "#003640",
-                      "primary-fixed": "#e9ddff",
-                      "outline-variant": "#49454f",
-                      "inverse-primary": "#665590",
-                      "secondary": "#4cd7f6",
-                      "on-primary-fixed-variant": "#4d3d76",
-                      "primary": "#e9ddff",
-                      "surface-bright": "#31394d",
-                      "on-surface-variant": "#cac4d0",
-                      "surface-tint": "#d0bcff",
-                      "on-primary-container": "#594983",
-                      "surface-container-high": "#222a3e",
-                      "inverse-surface": "#dbe2fd",
-                      "inverse-on-surface": "#283044",
-                      "on-tertiary-fixed-variant": "#3c475a",
-                      "error-container": "#93000a",
-                      "on-primary": "#37265e",
-                      "cyan-glow": "#4cd7f6",
-                      "surface-container-low": "#131b2e",
-                      "outline-metallic": "#958ea0",
-                      "outline": "#948f9a",
-                      "on-tertiary": "#263143",
-                      "secondary-container": "#03b5d4",
-                      "on-tertiary-container": "#485366"
-              },
-              "borderRadius": {
-                      "DEFAULT": "0.25rem",
-                      "lg": "0.5rem",
-                      "xl": "0.75rem",
-                      "full": "9999px"
-              },
-              "spacing": {
-                      "margin-mobile": "16px",
-                      "margin-desktop": "48px",
-                      "container-max": "1280px",
-                      "unit": "4px",
-                      "gutter": "24px"
-              },
-              "fontFamily": {
-                      "label-caps": [
-                              "JetBrains Mono", "sans-serif"
-                      ],
-                      "display-lg": [
-                              "Hanken Grotesk", "sans-serif"
-                      ],
-                      "headline-lg": [
-                              "Hanken Grotesk", "sans-serif"
-                      ],
-                      "body-md": [
-                              "Manrope", "sans-serif"
-                      ],
-                      "body-lg": [
-                              "Manrope", "sans-serif"
-                      ],
-                      "headline-md": [
-                              "Hanken Grotesk", "sans-serif"
-                      ],
-                      "headline-lg-mobile": [
-                              "Hanken Grotesk", "sans-serif"
-                      ],
-                      "label-sm": [
-                              "Manrope", "sans-serif"
-                      ]
-              },
-              "fontSize": {
-                      "label-caps": [
-                              "12px",
-                              {
-                                      "lineHeight": "1.0",
-                                      "letterSpacing": "0.05em",
-                                      "fontWeight": "500"
-                              }
-                      ],
-                      "display-lg": [
-                              "64px",
-                              {
-                                      "lineHeight": "1.1",
-                                      "letterSpacing": "0px",
-                                      "fontWeight": "800"
-                              }
-                      ],
-                      "headline-lg": [
-                              "40px",
-                              {
-                                      "lineHeight": "1.2",
-                                      "letterSpacing": "0px",
-                                      "fontWeight": "700"
-                              }
-                      ],
-                      "body-md": [
-                              "16px",
-                              {
-                                      "lineHeight": "1.6",
-                                      "fontWeight": "400"
-                              }
-                      ],
-                      "body-lg": [
-                              "18px",
-                              {
-                                      "lineHeight": "1.6",
-                                      "fontWeight": "400"
-                              }
-                      ],
-                      "headline-md": [
-                              "24px",
-                              {
-                                      "lineHeight": "1.3",
-                                      "fontWeight": "600"
-                              }
-                      ],
-                      "headline-lg-mobile": [
-                              "32px",
-                              {
-                                      "lineHeight": "1.2",
-                                      "fontWeight": "700"
-                              }
-                      ],
-                      "label-sm": [
-                              "13px",
-                              {
-                                      "lineHeight": "1.2",
-                                      "fontWeight": "600"
-                              }
-                      ]
-              }
-            },
-          }
-        }
-    </script>
+<meta property="og:image" content="img/hero-car.webp"/>
+<meta name="twitter:card" content="summary_large_image"/>
+
+<script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700;800;900&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL@20..48,100..700,0..1&display=swap" rel="stylesheet"/>
+
+<script>
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        colors: {
+          background: "#0b1326",
+          surface: "#0b1326",
+          "surface-container-lowest": "#060d20",
+          "surface-container-low": "#111a2e",
+          "surface-container": "#171f33",
+          "surface-container-high": "#222a3e",
+          "on-surface": "#eef2ff",
+          "on-surface-variant": "#c3cbe0",
+          "electric-violet": "#d0bcff",
+          "cyan-glow": "#7ee3fb",
+          "outline-variant": "#3b4463",
+          "on-primary-fixed": "#1b0f3a",
+        },
+        fontFamily: { sans: ['Heebo', 'system-ui', 'sans-serif'] },
+        maxWidth: { container: "1280px" },
+      },
+    },
+  }
+</script>
+
 <style>
-        .glass-panel {
-            background: rgba(45, 52, 73, 0.15);
-            backdrop-filter: blur(40px);
-            -webkit-backdrop-filter: blur(40px);
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            border-right: 1px solid rgba(255, 255, 255, 0.1); /* Mirrored for RTL */
-        }
-        .neon-glow {
-            box-shadow: 0 0 20px rgba(208, 188, 255, 0.3);
-        }
-        .text-gradient {
-            background: linear-gradient(90deg, #d0bcff 0%, #4cd7f6 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .btn-gradient {
-            background: linear-gradient(90deg, #d0bcff 0%, #665590 100%);
-            transition: all 0.3s ease;
-        }
-        .btn-gradient:hover {
-            box-shadow: 0 0 20px rgba(208, 188, 255, 0.5);
-            opacity: 0.9;
-        }
-        /* Custom Scrollbar for RTL */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #0b1326; 
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #2d3449; 
-            border-radius: 4px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #d0bcff; 
-        }
-    </style>
+  html { scroll-behavior: smooth; scroll-padding-top: 6rem; }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+  }
+  body { font-family: 'Heebo', system-ui, sans-serif; }
+
+  .glass-panel {
+    background: rgba(23, 31, 51, .55);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgba(255, 255, 255, .10);
+  }
+  .text-gradient {
+    background: linear-gradient(90deg, #d0bcff 0%, #7ee3fb 100%);
+    -webkit-background-clip: text; background-clip: text;
+    -webkit-text-fill-color: transparent; color: transparent;
+  }
+  /* Light gradient at BOTH ends so the dark label text always clears 4.5:1 */
+  .btn-primary {
+    background: linear-gradient(90deg, #e9ddff 0%, #d0bcff 100%);
+    color: #1b0f3a;
+    transition: box-shadow .2s ease, transform .2s ease;
+  }
+  .btn-primary:hover { box-shadow: 0 0 24px rgba(208, 188, 255, .45); }
+  .btn-primary:active { transform: scale(.98); }
+
+  /* Never remove focus: visible ring on every interactive element */
+  a:focus-visible, button:focus-visible, input:focus-visible,
+  select:focus-visible, textarea:focus-visible, summary:focus-visible {
+    outline: 3px solid #7ee3fb;
+    outline-offset: 3px;
+    border-radius: 6px;
+  }
+
+  .material-symbols-outlined {
+    font-family: 'Material Symbols Outlined';
+    font-variation-settings: 'FILL' 1, 'wght' 400, 'opsz' 24;
+    line-height: 1;
+  }
+
+  details > summary { list-style: none; cursor: pointer; }
+  details > summary::-webkit-details-marker { display: none; }
+  details[open] .faq-chevron { transform: rotate(180deg); }
+
+  ::-webkit-scrollbar { width: 10px; }
+  ::-webkit-scrollbar-track { background: #060d20; }
+  ::-webkit-scrollbar-thumb { background: #3b4463; border-radius: 5px; }
+  ::-webkit-scrollbar-thumb:hover { background: #d0bcff; }
+
+  .skip-link {
+    position: absolute; right: 1rem; top: -100px; z-index: 100;
+    background: #d0bcff; color: #1b0f3a; padding: .75rem 1.25rem;
+    border-radius: 0 0 .5rem .5rem; font-weight: 700; transition: top .2s ease;
+  }
+  .skip-link:focus { top: 0; }
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "אור זגורי — ליווי בקנייה ומכירה של רכב",
+  "description": "ליווי מקצועי בקנייה ומכירה של רכב בישראל: משא ומתן, בדיקה לפני קנייה, מכירה ללא עמלה למוכר.",
+  "areaServed": { "@type": "Country", "name": "ישראל" },
+  "priceRange": "0% עמלה למוכר",
+  "availableLanguage": "he"
+}
+</script>
 </head>
-<body class="bg-background text-on-surface font-body-md overflow-x-hidden selection:bg-electric-violet selection:text-surface">
-<!-- TopNavBar -->
-<nav class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-surface/80 backdrop-blur-xl border-b border-white/10 shadow-sm">
-<div class="flex flex-row-reverse justify-between items-center px-margin-mobile md:px-margin-desktop h-20 w-full max-w-container-max mx-auto">
-<div class="font-headline-md text-headline-md font-bold text-on-surface tracking-tight">
-                אור זגורי
-            </div>
-<div class="hidden md:flex flex-row-reverse gap-8 items-center">
-<a class="font-body-md text-body-md text-electric-violet font-bold border-b-2 border-electric-violet pb-1 active:scale-95 duration-200" href="#">שירותים</a>
-<a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors hover:opacity-80 transition-all active:scale-95 duration-200" href="#process">תהליך</a>
-<a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors hover:opacity-80 transition-all active:scale-95 duration-200" href="#inventory">מלאי</a>
-<a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors hover:opacity-80 transition-all active:scale-95 duration-200" href="#testimonials">המלצות</a>
-</div>
-<a class="hidden md:flex items-center gap-2 btn-gradient text-on-primary-fixed font-body-md font-bold py-2 px-6 rounded-full cursor-pointer hover:opacity-80 transition-all active:scale-95 duration-200" href="#lead-form">
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">phone_in_talk</span>
-                ייעוץ אישי
-            </a>
-<button class="md:hidden text-on-surface hover:text-electric-violet transition-colors">
-<span class="material-symbols-outlined text-3xl">menu</span>
-</button>
-</div>
+
+<body class="bg-background text-on-surface antialiased overflow-x-hidden selection:bg-electric-violet selection:text-surface">
+
+<a class="skip-link" href="#main">דלג לתוכן המרכזי</a>
+
+<!-- ============ NAV ============ -->
+<nav aria-label="ניווט ראשי" class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-xl border-b border-white/10">
+  <div class="flex justify-between items-center gap-4 px-5 md:px-10 h-20 w-full max-w-container mx-auto">
+    <a class="text-2xl font-black tracking-tight" href="#main">אור זגורי</a>
+
+    <ul class="hidden md:flex gap-7 items-center list-none">
+      <li><a class="text-base text-on-surface-variant hover:text-on-surface transition-colors" href="#services">שירותים</a></li>
+      <li><a class="text-base text-on-surface-variant hover:text-on-surface transition-colors" href="#process">איך זה עובד</a></li>
+      <li><a class="text-base text-on-surface-variant hover:text-on-surface transition-colors" href="#about">מי אני</a></li>
+      <li><a class="text-base text-on-surface-variant hover:text-on-surface transition-colors" href="#testimonials">המלצות</a></li>
+      <li><a class="text-base text-on-surface-variant hover:text-on-surface transition-colors" href="#faq">שאלות נפוצות</a></li>
+    </ul>
+
+    <a class="hidden md:inline-flex items-center gap-2 btn-primary font-bold py-3 px-6 rounded-full min-h-[44px]" href="#lead-form">
+      <span aria-hidden="true" class="material-symbols-outlined text-xl">forum</span>
+      ייעוץ אישי
+    </a>
+
+    <button aria-controls="mobile-menu" aria-expanded="false" aria-label="פתיחת תפריט ניווט"
+            class="md:hidden inline-flex items-center justify-center w-11 h-11 rounded-lg text-on-surface hover:bg-white/10 transition-colors"
+            id="menu-toggle" type="button">
+      <span aria-hidden="true" class="material-symbols-outlined text-3xl" id="menu-icon">menu</span>
+    </button>
+  </div>
+
+  <div class="hidden md:hidden border-t border-white/10 bg-surface-container-lowest" id="mobile-menu">
+    <ul class="flex flex-col p-4 gap-1 list-none max-w-container mx-auto">
+      <li><a class="block py-3 px-3 rounded-lg text-lg hover:bg-white/5" href="#services">שירותים</a></li>
+      <li><a class="block py-3 px-3 rounded-lg text-lg hover:bg-white/5" href="#process">איך זה עובד</a></li>
+      <li><a class="block py-3 px-3 rounded-lg text-lg hover:bg-white/5" href="#about">מי אני</a></li>
+      <li><a class="block py-3 px-3 rounded-lg text-lg hover:bg-white/5" href="#testimonials">המלצות</a></li>
+      <li><a class="block py-3 px-3 rounded-lg text-lg hover:bg-white/5" href="#faq">שאלות נפוצות</a></li>
+      <li class="mt-2"><a class="block text-center btn-primary font-bold py-3 px-6 rounded-full" href="#lead-form">ייעוץ אישי</a></li>
+    </ul>
+  </div>
 </nav>
-<!-- Hero Section -->
-<header class="relative min-h-screen flex items-center justify-center pt-20 px-margin-mobile md:px-margin-desktop overflow-hidden">
-<!-- Background Image Container -->
-<div class="absolute inset-0 z-0">
-<div class="absolute inset-0 bg-cover bg-center opacity-40" data-alt="A cinematic, low-key lighting shot of a sleek, dark grey luxury sports car parked in an ultra-modern underground garage. The scene is lit by dramatic overhead neon strips emitting a soft violet and cyan glow, reflecting off the car's metallic paint. The atmosphere is high-end, mysterious, and professional. 8k resolution, photorealistic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD6JfZPxPPjGfpE-srtXtPRE8fivD4M96DwFej7GB6yZXb9kSemqbUeK-lTrEF2xCi_CtvmeO98A9lz9CRT8kImBzeEYngkr1q8JopG6s6UziR74VnLY83dMMBMVgh53YLNOoSqXR-WHrxHZGRbbSIrFdpgIDUPX5NO-xNwXWoEiXdh7MJY7U0v-bBzFk0ncxI4utDD_nq7pDIKgwYvyOKF07OO_-6_4Ejj0XZtY2h-9ru2qBqxbZn4')"></div>
-<div class="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent"></div>
-<div class="absolute inset-0 bg-gradient-to-l from-background/50 to-transparent"></div>
-</div>
-<div class="relative z-10 w-full max-w-container-max mx-auto grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
-<!-- Hero Content (RTL -> Right side usually, but flex handles order) -->
-<div class="col-span-1 lg:col-span-7 flex flex-col gap-6 text-right">
-<div class="inline-flex items-center gap-3 bg-surface-container/50 border border-white/10 rounded-full px-4 py-2 w-fit backdrop-blur-md self-end lg:self-start mb-2">
-<span class="material-symbols-outlined text-electric-violet text-sm" style="font-variation-settings: 'FILL' 1;">verified</span>
-<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest">0% עמלה למוכר | קנייה ב-AS-IS | חיסכון בזמן ובכאבי ראש</span>
-</div>
-<h1 class="font-display-lg text-display-lg text-on-surface mb-2 leading-tight">
-                    קונים או מוכרים רכב?<br/>
-<span class="text-gradient">חוסכים את כאבי הראש</span> ומקבלים את המחיר הכי טוב.
-                </h1>
-<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl leading-relaxed">
-                    אור זגורי - ליווי מקצועי בקנייה ומכירה. 0% עמלה למוכר, הגנה מלאה מבדיקות מורכבות ומשא ומתן אגרסיבי. תנו למומחים לנהל את העסקה שלכם בשקט ובביטחון.
-                </p>
-<div class="flex flex-col sm:flex-row-reverse gap-4 mt-6 self-end lg:self-start">
-<a class="btn-gradient text-on-primary-fixed font-body-md font-bold py-4 px-8 rounded-full flex items-center justify-center gap-2 group w-full sm:w-auto" href="#lead-form">
-<span class="material-symbols-outlined transition-transform group-hover:-translate-x-1" style="font-variation-settings: 'FILL' 1;">arrow_back</span>
-                        התחילו עכשיו
-                    </a>
-</div>
-</div>
-<!-- Lead Capture Form (Glassmorphism Card) -->
-<div class="col-span-1 lg:col-span-5 mt-12 lg:mt-0" id="lead-form">
-<div class="glass-panel rounded-xl p-8 relative overflow-hidden neon-glow">
-<!-- Subtle background glow behind form -->
-<div class="absolute -top-20 -left-20 w-40 h-40 bg-electric-violet/20 rounded-full blur-3xl"></div>
-<h3 class="font-headline-md text-headline-md text-on-surface mb-6 relative z-10 flex items-center gap-3">
-<span class="material-symbols-outlined text-electric-violet">contact_mail</span>
-                        חזרו אליי לשיחת ייעוץ
-                    </h3>
-<form class="flex flex-col gap-5 relative z-10">
-<div class="relative">
-<input class="peer w-full bg-surface-container-low border border-outline-variant rounded-lg px-4 pt-6 pb-2 text-on-surface focus:border-electric-violet focus:ring-1 focus:ring-electric-violet transition-colors outline-none font-body-md" id="name" placeholder=" " type="text"/>
-<label class="absolute right-4 top-4 text-on-surface-variant font-label-sm text-label-sm transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-body-md peer-focus:top-1 peer-focus:text-label-sm peer-focus:text-electric-violet" for="name">שם מלא</label>
-</div>
-<div class="relative">
-<input class="peer w-full bg-surface-container-low border border-outline-variant rounded-lg px-4 pt-6 pb-2 text-on-surface focus:border-electric-violet focus:ring-1 focus:ring-electric-violet transition-colors outline-none font-body-md text-right" dir="ltr" id="phone" placeholder=" " type="tel"/>
-<label class="absolute right-4 top-4 text-on-surface-variant font-label-sm text-label-sm transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-body-md peer-focus:top-1 peer-focus:text-label-sm peer-focus:text-electric-violet" for="phone">טלפון</label>
-</div>
-<div class="relative">
-<select class="w-full bg-surface-container-low border border-outline-variant rounded-lg px-4 pt-6 pb-2 text-on-surface focus:border-electric-violet focus:ring-1 focus:ring-electric-violet transition-colors outline-none font-body-md appearance-none" id="service">
-<option disabled="" hidden="" selected="" value=""></option>
-<option class="bg-surface" value="sell">מכירת רכב</option>
-<option class="bg-surface" value="buy_used">קניית יד שנייה</option>
-<option class="bg-surface" value="buy_new">קניית רכב חדש</option>
-</select>
-<label class="absolute right-4 top-1 text-on-surface-variant font-label-sm text-label-sm text-electric-violet" for="service">סוג השירות</label>
-<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-on-surface-variant pointer-events-none">expand_more</span>
-</div>
-<button class="w-full btn-gradient text-on-primary-fixed font-body-md font-bold py-3 rounded-lg mt-2 flex justify-center items-center gap-2" type="submit">
-                            אור, חזור אליי
-                            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">send</span>
-</button>
-</form>
-</div>
-</div>
-</div>
+
+<main id="main">
+
+<!-- ============ HERO ============ -->
+<header class="relative min-h-screen flex items-center pt-24 pb-16 px-5 md:px-10 overflow-hidden">
+  <div class="absolute inset-0 z-0" aria-hidden="true">
+    <img alt="" class="w-full h-full object-cover opacity-40" fetchpriority="high"
+         src="img/hero-car.webp" width="1920" height="1280"/>
+    <div class="absolute inset-0 bg-gradient-to-t from-background via-background/85 to-background/40"></div>
+    <div class="absolute inset-0 bg-gradient-to-l from-background/70 to-transparent"></div>
+  </div>
+
+  <div class="relative z-10 w-full max-w-container mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+    <div class="lg:col-span-7 flex flex-col gap-6">
+      <p class="inline-flex items-center gap-3 bg-surface-container/70 border border-white/10 rounded-full px-4 py-2 w-fit backdrop-blur-md text-sm font-medium text-on-surface-variant">
+        <span aria-hidden="true" class="material-symbols-outlined text-electric-violet text-lg">verified</span>
+        0% עמלה למוכר · ליווי עד סגירת העסקה
+      </p>
+
+      <h1 class="text-4xl md:text-6xl font-black leading-tight">
+        קונים או מוכרים רכב?<br/>
+        <span class="text-gradient">אני חוסך לכם את כאבי הראש</span><br/>
+        ומשיג את המחיר הנכון.
+      </h1>
+
+      <p class="text-lg text-on-surface-variant leading-relaxed max-w-2xl">
+        אני מנהל בשבילכם את כל התהליך — מהמשא ומתן מול המגרש או היבואן, דרך הבדיקה לפני
+        קנייה, ועד סגירת העסקה. אתם מקבלים מישהו מהצד שלכם, שמכיר את השוק ולא מתבייש
+        להתמקח. בלי עמלה למוכר, ובלי אותיות קטנות.
+      </p>
+
+      <ul class="flex flex-wrap gap-x-6 gap-y-3 text-base text-on-surface-variant list-none">
+        <li class="flex items-center gap-2"><span aria-hidden="true" class="material-symbols-outlined text-cyan-glow text-xl">check_circle</span>משא ומתן מקצועי בשמכם</li>
+        <li class="flex items-center gap-2"><span aria-hidden="true" class="material-symbols-outlined text-cyan-glow text-xl">check_circle</span>ליווי בבדיקה לפני קנייה</li>
+        <li class="flex items-center gap-2"><span aria-hidden="true" class="material-symbols-outlined text-cyan-glow text-xl">check_circle</span>שיחת ייעוץ ראשונה ללא התחייבות</li>
+      </ul>
+
+      <div class="flex flex-col sm:flex-row gap-4 mt-2">
+        <a class="btn-primary font-bold py-4 px-8 rounded-full inline-flex items-center justify-center gap-2 text-lg min-h-[44px]" href="#lead-form">
+          <span aria-hidden="true" class="material-symbols-outlined">arrow_back</span>
+          דברו איתי
+        </a>
+        <a class="border border-electric-violet/40 text-electric-violet hover:bg-electric-violet/10 font-bold py-4 px-8 rounded-full inline-flex items-center justify-center gap-2 text-lg transition-colors min-h-[44px]" href="#process">
+          איך התהליך עובד?
+        </a>
+      </div>
+    </div>
+
+    <!-- Lead form -->
+    <div class="lg:col-span-5" id="lead-form">
+      <div class="glass-panel rounded-2xl p-6 md:p-8 relative overflow-hidden">
+        <div aria-hidden="true" class="absolute -top-24 -left-24 w-48 h-48 bg-electric-violet/20 rounded-full blur-3xl"></div>
+
+        <h2 class="text-2xl font-bold mb-2 relative z-10 flex items-center gap-3">
+          <span aria-hidden="true" class="material-symbols-outlined text-electric-violet">forum</span>
+          נדבר על הרכב שלכם
+        </h2>
+        <p class="text-sm text-on-surface-variant mb-6 relative z-10">
+          משאירים פרטים ואני חוזר אליכם בוואטסאפ. ללא עלות וללא התחייבות.
+        </p>
+
+        <form class="flex flex-col gap-5 relative z-10" id="lead-form-el" novalidate>
+          <div>
+            <label class="block mb-2 font-medium text-base" for="name">שם מלא <span aria-hidden="true" class="text-electric-violet">*</span></label>
+            <input aria-describedby="name-error" aria-required="true" autocomplete="name"
+                   class="w-full bg-surface-container-low border border-outline-variant rounded-lg px-4 py-3 text-on-surface text-base outline-none focus:border-electric-violet transition-colors min-h-[44px]"
+                   id="name" name="name" required type="text"/>
+            <p class="hidden mt-2 text-sm text-red-300 flex items-center gap-1.5" id="name-error">
+              <span aria-hidden="true" class="material-symbols-outlined text-base">error</span>
+              <span>נא למלא שם מלא</span>
+            </p>
+          </div>
+
+          <div>
+            <label class="block mb-2 font-medium text-base" for="phone">טלפון <span aria-hidden="true" class="text-electric-violet">*</span></label>
+            <input aria-describedby="phone-hint phone-error" aria-required="true" autocomplete="tel" dir="ltr"
+                   class="w-full bg-surface-container-low border border-outline-variant rounded-lg px-4 py-3 text-on-surface text-base text-right outline-none focus:border-electric-violet transition-colors min-h-[44px]"
+                   id="phone" inputmode="tel" name="phone" required type="tel"/>
+            <p class="mt-2 text-sm text-on-surface-variant" id="phone-hint">לדוגמה: 050-1234567</p>
+            <p class="hidden mt-2 text-sm text-red-300 flex items-center gap-1.5" id="phone-error">
+              <span aria-hidden="true" class="material-symbols-outlined text-base">error</span>
+              <span>נא למלא מספר טלפון תקין (לפחות 9 ספרות)</span>
+            </p>
+          </div>
+
+          <div>
+            <label class="block mb-2 font-medium text-base" for="service">מה אתם צריכים? <span aria-hidden="true" class="text-electric-violet">*</span></label>
+            <select aria-describedby="service-error" aria-required="true" required
+                    class="w-full bg-surface-container-low border border-outline-variant rounded-lg px-4 py-3 text-on-surface text-base outline-none focus:border-electric-violet transition-colors min-h-[44px]"
+                    id="service" name="service">
+              <option value="">בחרו סוג שירות…</option>
+              <option value="מכירת רכב">מכירת הרכב שלי</option>
+              <option value="קניית יד שנייה">קניית רכב יד שנייה</option>
+              <option value="קניית רכב חדש">קניית רכב חדש מיבואן</option>
+              <option value="לא בטוח / ייעוץ כללי">עוד לא בטוח — רק לדבר</option>
+            </select>
+            <p class="hidden mt-2 text-sm text-red-300 flex items-center gap-1.5" id="service-error">
+              <span aria-hidden="true" class="material-symbols-outlined text-base">error</span>
+              <span>נא לבחור סוג שירות</span>
+            </p>
+          </div>
+
+          <div>
+            <label class="block mb-2 font-medium text-base" for="notes">משהו שכדאי שאדע? <span class="text-on-surface-variant font-normal">(לא חובה)</span></label>
+            <textarea class="w-full bg-surface-container-low border border-outline-variant rounded-lg px-4 py-3 text-on-surface text-base outline-none focus:border-electric-violet transition-colors"
+                      id="notes" name="notes" rows="3"></textarea>
+          </div>
+
+          <button class="w-full btn-primary font-bold py-4 rounded-lg inline-flex justify-center items-center gap-2 text-lg min-h-[44px]" type="submit">
+            <span aria-hidden="true" class="material-symbols-outlined">send</span>
+            שלחו לי בוואטסאפ
+          </button>
+
+          <p aria-live="polite" class="text-sm text-cyan-glow text-center min-h-[1.25rem]" id="form-status" role="status"></p>
+        </form>
+      </div>
+    </div>
+  </div>
 </header>
-<!-- Footer -->
-<footer class="bg-surface-container-lowest dark:bg-surface-container-lowest border-t border-white/5 w-full py-12 relative z-10">
-<div class="flex flex-col md:flex-row-reverse justify-between items-center px-margin-mobile md:px-margin-desktop w-full max-w-container-max mx-auto gap-8 text-right">
-<div class="flex flex-col items-end gap-2">
-<div class="font-headline-md text-headline-md text-on-surface">
-                    אור זגורי
-                </div>
-<p class="font-label-sm text-label-sm text-on-surface-variant">
-                    © 2024 אור זגורי - תיווך רכבי יוקרה. כל הזכויות שמורות.
-                </p>
-</div>
-<div class="flex flex-row-reverse gap-6">
-<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#">תקנון</a>
-<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#">מדיניות פרטיות</a>
-<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#">הצהרת נגישות</a>
-</div>
-<!-- Minimal CTA in footer to reinforce no-phone rule -->
-<a class="font-body-md text-body-md text-electric-violet border border-electric-violet/30 hover:bg-electric-violet/10 py-2 px-6 rounded-full transition-all flex items-center gap-2" href="#lead-form">
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">forum</span>
-                חזרו אליי
-            </a>
-</div>
+
+<!-- ============ SERVICES ============ -->
+<section aria-labelledby="services-title" class="py-20 md:py-28 px-5 md:px-10 bg-surface-container-lowest" id="services">
+  <div class="max-w-container mx-auto">
+    <h2 class="text-3xl md:text-5xl font-black mb-4" id="services-title">מה אני עושה בשבילכם</h2>
+    <p class="text-lg text-on-surface-variant mb-14 max-w-3xl">
+      שלושה מצבים שבהם רוב האנשים משלמים יותר מדי, או מוכרים בפחות מדי — ובכל אחד מהם
+      אני נכנס בשבילכם לתמונה.
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <article class="glass-panel rounded-2xl p-7 flex flex-col gap-4">
+        <span aria-hidden="true" class="material-symbols-outlined text-4xl text-electric-violet">sell</span>
+        <h3 class="text-xl font-bold">מכירת הרכב שלכם</h3>
+        <p class="text-on-surface-variant leading-relaxed">
+          אני מנהל את המכירה מול הקונים והמגרשים: מסנן פניות סרק, מתמודד עם ירידות מחיר
+          על סמך טופס בדיקה, ומביא אותכם למחיר נטו שהסכמנו עליו מראש. <strong class="text-on-surface">בלי עמלה מהמוכר.</strong>
+        </p>
+      </article>
+
+      <article class="glass-panel rounded-2xl p-7 flex flex-col gap-4">
+        <span aria-hidden="true" class="material-symbols-outlined text-4xl text-electric-violet">search_check</span>
+        <h3 class="text-xl font-bold">קניית רכב יד שנייה</h3>
+        <p class="text-on-surface-variant leading-relaxed">
+          מאתר רכבים שמתאימים לתקציב ולצרכים, מגיע לבדיקה לפני קנייה, קורא את טופס הבדיקה
+          לעומק — ומשתמש בכל ממצא כדי להוריד מהמחיר. אתם קונים בראש שקט.
+        </p>
+      </article>
+
+      <article class="glass-panel rounded-2xl p-7 flex flex-col gap-4">
+        <span aria-hidden="true" class="material-symbols-outlined text-4xl text-electric-violet">directions_car</span>
+        <h3 class="text-xl font-bold">קניית רכב חדש מיבואן</h3>
+        <p class="text-on-surface-variant leading-relaxed">
+          משא ומתן מול הסוכנות על המחיר, על חבילת התוספות ועל תנאי המסירה. השוק הזה בנוי
+          על כך שהקונה לא יודע מה אפשר לבקש — אני יודע.
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROCESS ============ -->
+<section aria-labelledby="process-title" class="py-20 md:py-28 px-5 md:px-10" id="process">
+  <div class="max-w-container mx-auto">
+    <h2 class="text-3xl md:text-5xl font-black mb-14" id="process-title">איך זה עובד</h2>
+
+    <ol class="grid grid-cols-1 md:grid-cols-4 gap-6 list-none counter-reset">
+      <li class="bg-surface-container rounded-2xl p-7 border border-white/5 flex flex-col gap-3">
+        <span class="text-electric-violet font-black text-3xl">01</span>
+        <h3 class="text-lg font-bold">שיחת היכרות</h3>
+        <p class="text-on-surface-variant text-base leading-relaxed">מבינים מה הרכב, מה התקציב ומה חשוב לכם. ללא עלות וללא התחייבות.</p>
+      </li>
+      <li class="bg-surface-container rounded-2xl p-7 border border-white/5 flex flex-col gap-3">
+        <span class="text-electric-violet font-black text-3xl">02</span>
+        <h3 class="text-lg font-bold">קובעים מחיר יעד</h3>
+        <p class="text-on-surface-variant text-base leading-relaxed">אני בודק את השוק ואומר לכם מה מחיר אמיתי — לא מה שנעים לשמוע.</p>
+      </li>
+      <li class="bg-surface-container rounded-2xl p-7 border border-white/5 flex flex-col gap-3">
+        <span class="text-electric-violet font-black text-3xl">03</span>
+        <h3 class="text-lg font-bold">אני מנהל את המו״מ</h3>
+        <p class="text-on-surface-variant text-base leading-relaxed">שיחות, בדיקות, התמקחות. אתם לא צריכים להתעסק עם אף אחד.</p>
+      </li>
+      <li class="bg-surface-container rounded-2xl p-7 border border-white/5 flex flex-col gap-3">
+        <span class="text-electric-violet font-black text-3xl">04</span>
+        <h3 class="text-lg font-bold">סוגרים עסקה</h3>
+        <p class="text-on-surface-variant text-base leading-relaxed">העברת בעלות, תשלום ומסירה — מלווה אותכם עד הסוף.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section aria-labelledby="about-title" class="py-20 md:py-28 px-5 md:px-10 bg-surface-container-lowest" id="about">
+  <div class="max-w-container mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+    <div class="lg:col-span-5">
+      <!-- TODO(אור): החלף בתמונה אמיתית שלך — img/or-zaguri.webp -->
+      <div class="glass-panel rounded-2xl aspect-[4/5] flex flex-col items-center justify-center gap-3 text-center p-8">
+        <span aria-hidden="true" class="material-symbols-outlined text-6xl text-electric-violet">person</span>
+        <p class="text-on-surface-variant text-sm">כאן תיכנס התמונה שלך<br/>(שלח לי אותה ואני מעלה)</p>
+      </div>
+    </div>
+
+    <div class="lg:col-span-7 flex flex-col gap-5">
+      <h2 class="text-3xl md:text-5xl font-black" id="about-title">מי אני</h2>
+      <p class="text-lg text-on-surface-variant leading-relaxed">
+        אני אור זגורי, ואני עוסק בליווי אנשים בקנייה ומכירה של רכב בישראל. הגעתי לתחום
+        הזה מנקודה מאוד פשוטה: שוק הרכב בנוי כך שמי שעושה את זה כל יום נמצא תמיד בעמדת
+        יתרון על מי שעושה את זה פעם בחמש שנים.
+      </p>
+      <p class="text-lg text-on-surface-variant leading-relaxed">
+        התפקיד שלי הוא לאזן את זה. אני נכנס לעסקה מהצד שלכם — מכיר את המחירים האמיתיים,
+        יודע לקרוא טופס בדיקה, ולא מתרגש ממשא ומתן. אתם מקבלים את השקט, ואני לוקח את
+        הכאב ראש.
+      </p>
+      <!-- TODO(אור): הוסף כאן ניסיון בשנים / מספר עסקאות / רקע מקצועי -->
+
+      <dl class="grid grid-cols-2 sm:grid-cols-3 gap-6 mt-4">
+        <div class="flex flex-col gap-1">
+          <dt class="text-on-surface-variant text-sm">עמלה מהמוכר</dt>
+          <dd class="text-3xl font-black text-gradient">0%</dd>
+        </div>
+        <div class="flex flex-col gap-1">
+          <dt class="text-on-surface-variant text-sm">שיחת ייעוץ ראשונה</dt>
+          <dd class="text-3xl font-black text-gradient">חינם</dd>
+        </div>
+        <div class="flex flex-col gap-1">
+          <dt class="text-on-surface-variant text-sm">ליווי</dt>
+          <dd class="text-3xl font-black text-gradient">עד הסוף</dd>
+        </div>
+      </dl>
+
+      <a class="btn-primary font-bold py-4 px-8 rounded-full inline-flex items-center justify-center gap-2 w-fit mt-4 min-h-[44px]" href="#lead-form">
+        <span aria-hidden="true" class="material-symbols-outlined">forum</span>
+        בואו נדבר
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIALS ============ -->
+<section aria-labelledby="testimonials-title" class="py-20 md:py-28 px-5 md:px-10" id="testimonials">
+  <div class="max-w-container mx-auto">
+    <h2 class="text-3xl md:text-5xl font-black mb-4" id="testimonials-title">מה אומרים עליי</h2>
+    <p class="text-lg text-on-surface-variant mb-14">לקוחות שליוויתי בקנייה או במכירה של רכב.</p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <figure class="glass-panel rounded-2xl p-7 flex flex-col gap-4">
+        <p aria-label="דירוג: 5 מתוך 5 כוכבים" class="text-cyan-glow text-lg tracking-widest" role="img">★★★★★</p>
+        <blockquote class="text-on-surface-variant leading-relaxed">
+          „ניסיתי למכור את הרכב חודשיים ביד 2 ונפלתי רק על חפרנים שרצו לשחוט אותי במחיר
+          בגלל טופס הבדיקה. אור לקח את המושכות, סגר לי עסקה ב-AS-IS תוך יומיים בלי
+          ששילמתי שקל עמלה. איש נעים לשיחה, ישר, הסביר לי הכל בגובה העיניים ובלי
+          משחקים. מומלץ בחום!”
+        </blockquote>
+        <figcaption class="font-bold text-on-surface">ע. רמון <span class="font-normal text-on-surface-variant">· הרצליה</span></figcaption>
+      </figure>
+
+      <figure class="glass-panel rounded-2xl p-7 flex flex-col gap-4">
+        <p aria-label="דירוג: 5 מתוך 5 כוכבים" class="text-cyan-glow text-lg tracking-widest" role="img">★★★★★</p>
+        <blockquote class="text-on-surface-variant leading-relaxed">
+          „אור חסך לי מעל 11,000 ש״ח בקנייה של רכב חדש מהיבואן! הוא ניהל את כל המיקוח
+          מול סוכנות הרכב, דאג לי לחבילת תוספות מטורפת במחיר מצוין שאין סיכוי שהייתי
+          משיג לבד. מקצוען אמיתי שחי את השוק.”
+        </blockquote>
+        <figcaption class="font-bold text-on-surface">דניאל ק. <span class="font-normal text-on-surface-variant">· תל אביב</span></figcaption>
+      </figure>
+
+      <figure class="glass-panel rounded-2xl p-7 flex flex-col gap-4">
+        <p aria-label="דירוג: 5 מתוך 5 כוכבים" class="text-cyan-glow text-lg tracking-widest" role="img">★★★★★</p>
+        <blockquote class="text-on-surface-variant leading-relaxed">
+          „הגעתי לאור אחרי שחזרתי מבדיקה מתוסכל לגמרי. העסקה הקודמת התפוצצה והייתי בטוח
+          שאני הולך להפסיד 15 אלף שקל. אור טיפל בהכל במהירות, הביא קונה רציני וסגר לי
+          בדיוק את מחיר הנטו שרציתי בראש שקט. יחס זהב!”
+        </blockquote>
+        <figcaption class="font-bold text-on-surface">מיכאל ש. <span class="font-normal text-on-surface-variant">· ראשון לציון</span></figcaption>
+      </figure>
+
+      <figure class="glass-panel rounded-2xl p-7 flex flex-col gap-4">
+        <p aria-label="דירוג: 5 מתוך 5 כוכבים" class="text-cyan-glow text-lg tracking-widest" role="img">★★★★★</p>
+        <blockquote class="text-on-surface-variant leading-relaxed">
+          „כאישה שלא מבינה ברכבים, תמיד פחדתי שמסדרים אותי במוסכים או בבדיקות. אור ליווה
+          אותי מא׳ עד ת׳ בקניית ג׳יפון יד שנייה, בדק את הרכב, פתח את טופס הבדיקה והוריד
+          למוכר עוד 5,000 שקלים במחיר. הרגשתי שיש לי גב חזק.”
+        </blockquote>
+        <figcaption class="font-bold text-on-surface">יעל ג. <span class="font-normal text-on-surface-variant">· חולון</span></figcaption>
+      </figure>
+
+      <figure class="glass-panel rounded-2xl p-7 flex flex-col gap-4">
+        <p aria-label="דירוג: 5 מתוך 5 כוכבים" class="text-cyan-glow text-lg tracking-widest" role="img">★★★★★</p>
+        <blockquote class="text-on-surface-variant leading-relaxed">
+          „השירות הכי הוגן ופייר שיצא לי לפגוש בתחום הרכב בישראל. שקוף לחלוטין, זמין בכל
+          שעה, והכי חשוב — מקיים בדיוק את מה שהוא מבטיח. בלי אותיות קטנות ובלי בלבולי
+          מוח.”
+        </blockquote>
+        <figcaption class="font-bold text-on-surface">אסף פ. <span class="font-normal text-on-surface-variant">· גבעתיים</span></figcaption>
+      </figure>
+
+      <figure class="glass-panel rounded-2xl p-7 flex flex-col gap-4">
+        <p aria-label="דירוג: 5 מתוך 5 כוכבים" class="text-cyan-glow text-lg tracking-widest" role="img">★★★★★</p>
+        <blockquote class="text-on-surface-variant leading-relaxed">
+          „מכרתי דרכו שני רכבים של המשפחה. בראשון הוא סגר עניין תוך 24 שעות ובשני הביא
+          הצעה מעולה ממגרש שאפילו לא חשבתי עליה. חסך לי ימי עבודה ושיחות טלפון מתישות.
+          אין אלופים כאלה.”
+        </blockquote>
+        <figcaption class="font-bold text-on-surface">שמעון מ. <span class="font-normal text-on-surface-variant">· באר שבע</span></figcaption>
+      </figure>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section aria-labelledby="faq-title" class="py-20 md:py-28 px-5 md:px-10 bg-surface-container-lowest" id="faq">
+  <div class="max-w-container mx-auto max-w-4xl">
+    <h2 class="text-3xl md:text-5xl font-black mb-14" id="faq-title">שאלות נפוצות</h2>
+
+    <div class="flex flex-col gap-4">
+      <details class="bg-surface-container rounded-xl border border-white/5">
+        <summary class="flex justify-between items-center gap-4 p-6 text-lg font-bold min-h-[44px]">
+          כמה זה עולה לי?
+          <span aria-hidden="true" class="material-symbols-outlined faq-chevron transition-transform text-electric-violet">expand_more</span>
+        </summary>
+        <p class="px-6 pb-6 text-on-surface-variant leading-relaxed">
+          שיחת הייעוץ הראשונה היא ללא עלות וללא התחייבות. במכירת רכב אני לא לוקח עמלה
+          מהמוכר. בליווי קנייה נסגור מראש את התנאים בשיחה, כך שתדעו בדיוק מה העלות לפני
+          שמתחילים.
+        </p>
+      </details>
+
+      <details class="bg-surface-container rounded-xl border border-white/5">
+        <summary class="flex justify-between items-center gap-4 p-6 text-lg font-bold min-h-[44px]">
+          מה זה בעצם ״0% עמלה למוכר״?
+          <span aria-hidden="true" class="material-symbols-outlined faq-chevron transition-transform text-electric-violet">expand_more</span>
+        </summary>
+        <p class="px-6 pb-6 text-on-surface-variant leading-relaxed">
+          כשאתם מוכרים רכב דרכי, אתם לא משלמים לי עמלה מהסכום שאתם מקבלים. אנחנו קובעים
+          מראש מחיר נטו שאתם רוצים לקבל ליד — וזה מה שאתם מקבלים.
+        </p>
+      </details>
+
+      <details class="bg-surface-container rounded-xl border border-white/5">
+        <summary class="flex justify-between items-center gap-4 p-6 text-lg font-bold min-h-[44px]">
+          אני גר בפריפריה — אתה עובד בכל הארץ?
+          <span aria-hidden="true" class="material-symbols-outlined faq-chevron transition-transform text-electric-violet">expand_more</span>
+        </summary>
+        <p class="px-6 pb-6 text-on-surface-variant leading-relaxed">
+          כן. חלק גדול מהתהליך — משא ומתן, בדיקת מחירים, סינון פניות — נעשה בטלפון
+          ובוואטסאפ ולא תלוי במקום. בבדיקות ובמסירה נתאם לפי הצורך.
+        </p>
+      </details>
+
+      <details class="bg-surface-container rounded-xl border border-white/5">
+        <summary class="flex justify-between items-center gap-4 p-6 text-lg font-bold min-h-[44px]">
+          כמה זמן לוקח למכור רכב?
+          <span aria-hidden="true" class="material-symbols-outlined faq-chevron transition-transform text-electric-violet">expand_more</span>
+        </summary>
+        <p class="px-6 pb-6 text-on-surface-variant leading-relaxed">
+          זה תלוי בדגם, בשנה, במצב הרכב ובמחיר היעד. יש רכבים שנסגרים תוך ימים ויש
+          שלוקחים יותר. בשיחה הראשונה אני אומר לכם הערכה כנה, ולא מבטיח מה שאי אפשר לקיים.
+        </p>
+      </details>
+
+      <details class="bg-surface-container rounded-xl border border-white/5">
+        <summary class="flex justify-between items-center gap-4 p-6 text-lg font-bold min-h-[44px]">
+          מה קורה אם הבדיקה מגלה בעיה ברכב?
+          <span aria-hidden="true" class="material-symbols-outlined faq-chevron transition-transform text-electric-violet">expand_more</span>
+        </summary>
+        <p class="px-6 pb-6 text-on-surface-variant leading-relaxed">
+          זה בדיוק הרגע שבו הליווי משתלם. ממצא בטופס בדיקה הוא קלף במשא ומתן — או שמתקנים
+          את המחיר בהתאם, או שממשיכים לרכב הבא. מה שלא קורה זה שתגלו את זה אחרי שחתמתם.
+        </p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA BAND ============ -->
+<section aria-labelledby="cta-title" class="relative py-20 md:py-28 px-5 md:px-10 overflow-hidden">
+  <div class="absolute inset-0 z-0" aria-hidden="true">
+    <img alt="" class="w-full h-full object-cover opacity-25" loading="lazy" src="img/cta-car.webp" width="1400" height="933"/>
+    <div class="absolute inset-0 bg-gradient-to-t from-background via-background/90 to-background/70"></div>
+  </div>
+  <div class="relative z-10 max-w-container mx-auto text-center flex flex-col items-center gap-6">
+    <h2 class="text-3xl md:text-5xl font-black max-w-3xl" id="cta-title">
+      לפני שאתם סוגרים עסקה — <span class="text-gradient">בואו נדבר חמש דקות</span>
+    </h2>
+    <p class="text-lg text-on-surface-variant max-w-2xl">
+      שיחה אחת יכולה לחסוך לכם אלפי שקלים, או למנוע קנייה של רכב שלא הייתם רוצים. ללא
+      עלות וללא התחייבות.
+    </p>
+    <a class="btn-primary font-bold py-4 px-10 rounded-full inline-flex items-center gap-2 text-lg min-h-[44px]" href="#lead-form">
+      <span aria-hidden="true" class="material-symbols-outlined">forum</span>
+      השאירו פרטים
+    </a>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="bg-surface-container-lowest border-t border-white/10 w-full py-14 px-5 md:px-10">
+  <div class="max-w-container mx-auto flex flex-col md:flex-row justify-between gap-10">
+    <div class="flex flex-col gap-3 max-w-md">
+      <p class="text-2xl font-black">אור זגורי</p>
+      <p class="text-on-surface-variant leading-relaxed">
+        ליווי מקצועי בקנייה ומכירה של רכב בישראל. משא ומתן, בדיקות, וסגירת עסקה בראש שקט.
+      </p>
+    </div>
+
+    <nav aria-label="קישורים בתחתית האתר" class="flex flex-col gap-3">
+      <p class="font-bold text-on-surface">מידע</p>
+      <a class="text-on-surface-variant hover:text-electric-violet transition-colors" href="accessibility.html">הצהרת נגישות</a>
+      <a class="text-on-surface-variant hover:text-electric-violet transition-colors" href="privacy.html">מדיניות פרטיות</a>
+      <a class="text-on-surface-variant hover:text-electric-violet transition-colors" href="terms.html">תקנון ותנאי שימוש</a>
+    </nav>
+
+    <div class="flex flex-col gap-3">
+      <p class="font-bold text-on-surface">יצירת קשר</p>
+      <a class="inline-flex items-center gap-2 text-on-surface-variant hover:text-electric-violet transition-colors" href="#lead-form">
+        <span aria-hidden="true" class="material-symbols-outlined text-xl">forum</span>
+        השאירו פרטים ואחזור אליכם
+      </a>
+    </div>
+  </div>
+
+  <p class="max-w-container mx-auto mt-12 pt-8 border-t border-white/5 text-sm text-on-surface-variant">
+    © <span id="year">2026</span> אור זגורי. כל הזכויות שמורות.
+  </p>
 </footer>
-</body></html>
+
+<script>
+(function () {
+  "use strict";
+
+  /* ===================================================================
+     מספר הוואטסאפ שאליו נשלחות הפניות.
+     פורמט בינלאומי ללא + וללא מקפים. דוגמה: 972501234567
+     =================================================================== */
+  var WHATSAPP_NUMBER = "972500000000"; // TODO(אור): החלף במספר האמיתי שלך
+
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  /* ---------- Mobile menu ---------- */
+  var toggle = document.getElementById("menu-toggle");
+  var menu = document.getElementById("mobile-menu");
+  var menuIcon = document.getElementById("menu-icon");
+
+  function setMenu(open) {
+    menu.classList.toggle("hidden", !open);
+    toggle.setAttribute("aria-expanded", String(open));
+    toggle.setAttribute("aria-label", open ? "סגירת תפריט ניווט" : "פתיחת תפריט ניווט");
+    menuIcon.textContent = open ? "close" : "menu";
+  }
+
+  toggle.addEventListener("click", function () {
+    setMenu(menu.classList.contains("hidden"));
+  });
+
+  menu.addEventListener("click", function (e) {
+    if (e.target.closest("a")) setMenu(false);
+  });
+
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape" && !menu.classList.contains("hidden")) {
+      setMenu(false);
+      toggle.focus();
+    }
+  });
+
+  /* ---------- Lead form -> WhatsApp ---------- */
+  var form = document.getElementById("lead-form-el");
+  var status = document.getElementById("form-status");
+
+  var fields = [
+    { id: "name",    error: "name-error",    valid: function (v) { return v.trim().length >= 2; } },
+    { id: "phone",   error: "phone-error",   valid: function (v) { return v.replace(/\D/g, "").length >= 9; } },
+    { id: "service", error: "service-error", valid: function (v) { return v !== ""; } }
+  ];
+
+  function showError(f, show) {
+    var input = document.getElementById(f.id);
+    var err = document.getElementById(f.error);
+    err.classList.toggle("hidden", !show);
+    input.setAttribute("aria-invalid", String(show));
+    input.classList.toggle("border-red-400", show);
+    input.classList.toggle("border-outline-variant", !show);
+  }
+
+  // Clear the error as soon as the user fixes the field
+  fields.forEach(function (f) {
+    var input = document.getElementById(f.id);
+    input.addEventListener("input", function () { if (f.valid(input.value)) showError(f, false); });
+    input.addEventListener("change", function () { if (f.valid(input.value)) showError(f, false); });
+  });
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    status.textContent = "";
+
+    var firstBad = null;
+    fields.forEach(function (f) {
+      var ok = f.valid(document.getElementById(f.id).value);
+      showError(f, !ok);
+      if (!ok && !firstBad) firstBad = f;
+    });
+
+    if (firstBad) {
+      // Move focus to the first problem field so keyboard/screen-reader users land on it
+      document.getElementById(firstBad.id).focus();
+      status.className = "text-sm text-red-300 text-center min-h-[1.25rem]";
+      status.textContent = "יש שדות שצריך להשלים לפני השליחה.";
+      return;
+    }
+
+    var name = document.getElementById("name").value.trim();
+    var phone = document.getElementById("phone").value.trim();
+    var service = document.getElementById("service").value;
+    var notes = document.getElementById("notes").value.trim();
+
+    var msg =
+      "היי אור, הגעתי מהאתר.\n" +
+      "שם: " + name + "\n" +
+      "טלפון: " + phone + "\n" +
+      "מעוניין ב: " + service +
+      (notes ? "\nהערות: " + notes : "");
+
+    status.className = "text-sm text-cyan-glow text-center min-h-[1.25rem]";
+    status.textContent = "פותח וואטסאפ… אם לא נפתח, בדקו שחלונות קופצים מאושרים.";
+
+    window.open("https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(msg), "_blank", "noopener");
+  });
+})();
+</script>
+
+</body>
+</html>
