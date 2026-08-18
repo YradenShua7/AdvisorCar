@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://advisorcar-production.up.railway.app/</loc><changefreq>monthly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://advisorcar-production.up.railway.app/accessibility.html</loc><priority>0.3</priority></url>
-  <url><loc>https://advisorcar-production.up.railway.app/privacy.html</loc><priority>0.3</priority></url>
-  <url><loc>https://advisorcar-production.up.railway.app/terms.html</loc><priority>0.3</priority></url>
+  <url><loc>https://buymeanewcar.com/</loc><changefreq>monthly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://buymeanewcar.com/accessibility.html</loc><priority>0.3</priority></url>
+  <url><loc>https://buymeanewcar.com/privacy.html</loc><priority>0.3</priority></url>
+  <url><loc>https://buymeanewcar.com/terms.html</loc><priority>0.3</priority></url>
 </urlset>
