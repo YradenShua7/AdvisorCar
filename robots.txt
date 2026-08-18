@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://advisorcar-production.up.railway.app/sitemap.xml
+Sitemap: https://buymeanewcar.com/sitemap.xml
