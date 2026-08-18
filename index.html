@@ -14,6 +14,9 @@
 <meta property="og:locale" content="he_IL"/>
 <meta property="og:image" content="img/hero-car.webp"/>
 <meta name="twitter:card" content="summary_large_image"/>
+<link rel="icon" href="favicon.svg" type="image/svg+xml"/>
+<link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png"/>
+<link rel="apple-touch-icon" href="apple-touch-icon.png"/>
 
 <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
@@ -349,8 +352,52 @@
   </div>
 </section>
 
+<!-- ============ NETWORK / WHO I WORK WITH ============ -->
+<section aria-labelledby="network-title" class="py-20 md:py-28 px-5 md:px-10 bg-surface-container-lowest" id="network">
+  <div class="max-w-container mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+    <div class="lg:col-span-5">
+      <h2 class="text-3xl md:text-5xl font-black mb-5" id="network-title">עם מי אני עובד</h2>
+      <p class="text-lg text-on-surface-variant leading-relaxed">
+        גם עם אנשים פרטיים וגם עם סוכנויות ומגרשים — וזה בדיוק מה שמאפשר לי לחבר בין
+        אנשים לעסקאות. אני יודע מה הלקוחות שלי מחפשים, ואני הופך קשרים ועולמות כדי
+        להשיג את זה.
+      </p>
+    </div>
+
+    <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
+      <article class="glass-panel rounded-2xl p-7 flex flex-col gap-3">
+        <span aria-hidden="true" class="material-symbols-outlined text-3xl text-electric-violet">person</span>
+        <h3 class="text-lg font-bold">אנשים פרטיים</h3>
+        <p class="text-on-surface-variant leading-relaxed">
+          מי שמוכר את הרכב שלו או מחפש רכב לעצמו, ורוצה מישהו מהצד שלו שינהל את
+          התהליך במקומו.
+        </p>
+      </article>
+
+      <article class="glass-panel rounded-2xl p-7 flex flex-col gap-3">
+        <span aria-hidden="true" class="material-symbols-outlined text-3xl text-electric-violet">storefront</span>
+        <h3 class="text-lg font-bold">סוכנויות ומגרשים</h3>
+        <p class="text-on-surface-variant leading-relaxed">
+          קשרים בשוק שמאפשרים לי להגיע להצעות ולרכבים שלא תמיד מפורסמים בלוחות
+          הפומביים.
+        </p>
+      </article>
+
+      <article class="glass-panel rounded-2xl p-7 flex flex-col gap-3 sm:col-span-2 border-electric-violet/25">
+        <span aria-hidden="true" class="material-symbols-outlined text-3xl text-cyan-glow">handshake</span>
+        <h3 class="text-lg font-bold">מבחינתכם — זה לא משנה מאיזה צד באה ההצעה</h3>
+        <p class="text-on-surface-variant leading-relaxed">
+          אתם מקבלים את המחיר המבוקש. אני זה שמתרוצץ בין הצדדים, בודק מי מציע מה,
+          ומביא לכם את ההצעה הטובה ביותר שאפשר להשיג — בין אם היא הגיעה מאדם פרטי או
+          ממגרש.
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
+
 <!-- ============ ABOUT ============ -->
-<section aria-labelledby="about-title" class="py-20 md:py-28 px-5 md:px-10 bg-surface-container-lowest" id="about">
+<section aria-labelledby="about-title" class="py-20 md:py-28 px-5 md:px-10" id="about">
   <div class="max-w-container mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
     <div class="lg:col-span-5">
       <!-- TODO(אור): החלף בתמונה אמיתית שלך — img/or-zaguri.webp -->
@@ -398,7 +445,7 @@
 </section>
 
 <!-- ============ TESTIMONIALS ============ -->
-<section aria-labelledby="testimonials-title" class="py-20 md:py-28 px-5 md:px-10" id="testimonials">
+<section aria-labelledby="testimonials-title" class="py-20 md:py-28 px-5 md:px-10 bg-surface-container-lowest" id="testimonials">
   <div class="max-w-container mx-auto">
     <h2 class="text-3xl md:text-5xl font-black mb-4" id="testimonials-title">מה אומרים עליי</h2>
     <p class="text-lg text-on-surface-variant mb-14">לקוחות שליוויתי בקנייה או במכירה של רכב.</p>
@@ -471,7 +518,7 @@
 </section>
 
 <!-- ============ FAQ ============ -->
-<section aria-labelledby="faq-title" class="py-20 md:py-28 px-5 md:px-10 bg-surface-container-lowest" id="faq">
+<section aria-labelledby="faq-title" class="py-20 md:py-28 px-5 md:px-10" id="faq">
   <div class="max-w-container mx-auto max-w-4xl">
     <h2 class="text-3xl md:text-5xl font-black mb-14" id="faq-title">שאלות נפוצות</h2>
 
@@ -594,10 +641,17 @@
   "use strict";
 
   /* ===================================================================
-     מספר הוואטסאפ שאליו נשלחות הפניות.
-     פורמט בינלאומי ללא + וללא מקפים. דוגמה: 972501234567
+     מספר הוואטסאפ שאליו נשלחות הפניות (פורמט בינלאומי, ללא + וללא מקפים).
      =================================================================== */
-  var WHATSAPP_NUMBER = "972500000000"; // TODO(אור): החלף במספר האמיתי שלך
+  var WHATSAPP_NUMBER = "972549459472";
+
+  /* ===================================================================
+     התראה במייל על כל פנייה, בלי לחשוף את כתובת המייל באתר.
+     המייל עצמו שמור אצל Web3Forms ולא מופיע בקוד — רק המפתח הזה.
+     להשלמה: הרשמה חינמית ב-web3forms.com והעתקת ה-Access Key לכאן.
+     עד אז הטופס פשוט מדלג על שליחת המייל.
+     =================================================================== */
+  var WEB3FORMS_KEY = ""; // TODO(אור): הדבק כאן את ה-Access Key
 
   document.getElementById("year").textContent = new Date().getFullYear();
 
@@ -688,7 +742,27 @@
     status.className = "text-sm text-cyan-glow text-center min-h-[1.25rem]";
     status.textContent = "פותח וואטסאפ… אם לא נפתח, בדקו שחלונות קופצים מאושרים.";
 
+    // Open WhatsApp first — it must happen inside the click gesture or the
+    // browser blocks it as a popup.
     window.open("https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(msg), "_blank", "noopener");
+
+    // Notify by email in the background. Fails silently: WhatsApp is the
+    // primary channel and the visitor should never see a backend error.
+    if (WEB3FORMS_KEY) {
+      fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          access_key: WEB3FORMS_KEY,
+          subject: "פנייה חדשה מהאתר — " + service,
+          from_name: "אתר אור זגורי",
+          name: name,
+          phone: phone,
+          service: service,
+          notes: notes || "—"
+        })
+      }).catch(function () { /* silent */ });
+    }
   });
 })();
 </script>
