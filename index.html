@@ -4,12 +4,12 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>אור זגורי | ייעוץ וליווי בקנייה ומכירה של רכב</title>
-<meta name="description" content="אור זגורי — ייעוץ וליווי אישי בקנייה ומכירה של רכב: משא ומתן מול מגרשים ויבואנים, בדיקה לפני קנייה ותמחור שקוף שנסגר מראש. שיחת היכרות ללא עלות."/>
+<meta name="description" content="אור זגורי — ייעוץ וליווי אישי בקנייה ומכירה של רכב: משא ומתן מול מגרשים ויבואנים, אפיון צרכים, איתור רכבים ומשא ומתן מקצועי מול מגרשים ויבואנים. שיחת היכרות ללא עלות ובלי התחייבות."/>
 <meta name="robots" content="index, follow"/>
 <meta name="author" content="אור זגורי"/>
 <meta name="theme-color" content="#0b1326"/>
 <meta property="og:title" content="אור זגורי | ייעוץ וליווי בקנייה ומכירה של רכב"/>
-<meta property="og:description" content="ייעוץ וליווי אישי בקנייה ומכירה של רכב — משא ומתן, בדיקות וסגירת עסקה בראש שקט. תמחור שקוף שנסגר מראש."/>
+<meta property="og:description" content="ייעוץ וליווי אישי בקנייה ומכירה של רכב — אפיון צרכים, איתור רכבים, משא ומתן וסגירת עסקה בראש שקט."/>
 <meta property="og:type" content="website"/>
 <meta property="og:locale" content="he_IL"/>
 <meta property="og:image" content="https://advisorcar-production.up.railway.app/img/hero-car.webp"/>
@@ -107,6 +107,77 @@
     border-radius: 0 0 .5rem .5rem; font-weight: 700; transition: top .2s ease;
   }
   .skip-link:focus { top: 0; }
+
+  /* ================= Accessibility widget ================= */
+  #a11y-btn {
+    position: fixed; bottom: 1.25rem; left: 1.25rem; z-index: 90;
+    width: 56px; height: 56px; border-radius: 50%;
+    background: #d0bcff; color: #1b0f3a;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 4px 20px rgba(0,0,0,.5); cursor: pointer; border: none;
+  }
+  #a11y-btn:hover { background: #e9ddff; }
+  #a11y-btn svg { width: 34px; height: 34px; }
+  #a11y-panel {
+    position: fixed; bottom: 5.75rem; left: 1.25rem; z-index: 91;
+    width: min(19rem, calc(100vw - 2.5rem));
+    background: #171f33; border: 1px solid rgba(255,255,255,.14);
+    border-radius: 1rem; padding: 1.25rem;
+    box-shadow: 0 10px 40px rgba(0,0,0,.6);
+    max-height: min(78vh, 40rem); overflow-y: auto;
+  }
+  #a11y-panel[hidden] { display: none; }
+  #a11y-panel h2 { font-size: 1.05rem; font-weight: 800; margin: 0 0 .25rem; color: #eef2ff; }
+  #a11y-panel .a11y-sub { font-size: .8rem; color: #c3cbe0; margin: 0 0 1rem; }
+  .a11y-opt {
+    display: flex; align-items: center; justify-content: space-between; gap: .75rem;
+    width: 100%; min-height: 44px; padding: .6rem .8rem; margin-bottom: .4rem;
+    background: #111a2e; border: 1px solid #3b4463; border-radius: .6rem;
+    color: #eef2ff; font: inherit; font-size: .92rem; cursor: pointer; text-align: right;
+  }
+  .a11y-opt:hover { border-color: #d0bcff; }
+  .a11y-opt[aria-pressed="true"] { background: #d0bcff; color: #1b0f3a; border-color: #d0bcff; font-weight: 700; }
+  .a11y-opt .a11y-state { font-size: .75rem; opacity: .8; }
+  .a11y-row { display: flex; gap: .4rem; margin-bottom: .4rem; }
+  .a11y-row .a11y-opt { justify-content: center; margin-bottom: 0; }
+  #a11y-reset {
+    width: 100%; min-height: 44px; margin-top: .5rem; padding: .6rem;
+    background: transparent; border: 1px solid #d0bcff; border-radius: .6rem;
+    color: #d0bcff; font: inherit; font-weight: 700; cursor: pointer;
+  }
+  #a11y-reset:hover { background: rgba(208,188,255,.12); }
+  #a11y-panel .a11y-link { display: block; margin-top: .9rem; font-size: .85rem; color: #d0bcff; min-height: 44px; line-height: 44px; }
+
+  /* ---- user-selected adjustments ---- */
+  html.a11y-readable, html.a11y-readable * {
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif !important;
+    letter-spacing: .012em !important;
+  }
+  html.a11y-links a:not(#a11y-btn) {
+    text-decoration: underline !important; text-underline-offset: 3px;
+    outline: 1px dashed currentColor; outline-offset: 2px;
+  }
+  html.a11y-nomotion *, html.a11y-nomotion *::before, html.a11y-nomotion *::after {
+    animation: none !important; transition: none !important;
+  }
+  html.a11y-nomotion { scroll-behavior: auto !important; }
+
+  html.a11y-contrast body, html.a11y-contrast nav, html.a11y-contrast header,
+  html.a11y-contrast section, html.a11y-contrast footer, html.a11y-contrast details,
+  html.a11y-contrast .glass-panel, html.a11y-contrast article, html.a11y-contrast figure {
+    background: #000 !important; backdrop-filter: none !important;
+  }
+  html.a11y-contrast *:not(#a11y-btn):not(#a11y-btn *) { color: #fff !important; border-color: #fff !important; }
+  html.a11y-contrast .text-gradient {
+    background: none !important; -webkit-text-fill-color: #fff !important; color: #fff !important;
+  }
+  html.a11y-contrast a:not(#a11y-btn), html.a11y-contrast summary { color: #ff0 !important; }
+  html.a11y-contrast .btn-primary { background: #ff0 !important; color: #000 !important; }
+  html.a11y-contrast input, html.a11y-contrast select, html.a11y-contrast textarea {
+    background: #000 !important; color: #fff !important; border: 2px solid #fff !important;
+  }
+  html.a11y-contrast img { opacity: .2 !important; }
+  html.a11y-contrast .a11y-opt[aria-pressed="true"] { background: #ff0 !important; color: #000 !important; }
 </style>
 
 <script type="application/ld+json">
@@ -114,14 +185,14 @@
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
   "name": "אור זגורי — ייעוץ וליווי בקנייה ומכירה של רכב",
-  "description": "ייעוץ וליווי אישי בקנייה ומכירה של רכב בישראל: משא ומתן, בדיקה לפני קנייה ותמחור שקוף שנסגר מראש.",
+  "description": "ייעוץ וליווי אישי בקנייה ומכירה של רכב בישראל: אפיון צרכים, איתור רכבים ומשא ומתן מקצועי.",
   "areaServed": { "@type": "Country", "name": "ישראל" },
   "telephone": "+972549459472",
   "availableLanguage": "he"
 }
 </script>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "כמה זה עולה לי?", "acceptedAnswer": {"@type": "Answer", "text": "שיחת ההיכרות הראשונה היא ללא עלות וללא התחייבות. אם מחליטים להתקדם, אני גובה עמלה קבועה מכם — הלקוחות שלי — בסכום שנסגר מראש, לפני שמתחילים. בלי אחוזים נסתרים ובלי הפתעות בסוף הדרך."}}, {"@type": "Question", "name": "ממי אתה מקבל תשלום?", "acceptedAnswer": {"@type": "Answer", "text": "רק מהלקוח שאני מלווה. אני לא גובה תשלום מהצד השני לעסקה, ואם אי פעם תגיע לי טובת הנאה מגורם אחר — תדעו על כך במפורש לפני סגירת העסקה."}}, {"@type": "Question", "name": "אתה סוחר רכב?", "acceptedAnswer": {"@type": "Answer", "text": "לא. אני יועץ ומלווה בלבד — לא מחזיק תו סוחר, ולא קונה או מוכר רכבים בעצמי. ההמלצה שלי מופנית אליכם, וההחלטה הסופית על העסקה היא תמיד שלכם, על פי שיקול דעתכם."}}, {"@type": "Question", "name": "אני גר בפריפריה — אתה עובד בכל הארץ?", "acceptedAnswer": {"@type": "Answer", "text": "כן. חלק גדול מהתהליך — משא ומתן, בדיקת מחירים, סינון פניות — נעשה בטלפון ובוואטסאפ ולא תלוי במקום. בבדיקות ובמסירה נתאם לפי הצורך."}}, {"@type": "Question", "name": "כמה זמן לוקח למכור רכב?", "acceptedAnswer": {"@type": "Answer", "text": "זה תלוי בדגם, בשנה, במצב הרכב ובמחיר היעד. יש רכבים שנסגרים תוך ימים ויש שלוקחים יותר. בשיחה הראשונה אני אומר לכם הערכה כנה, ולא מבטיח מה שאי אפשר לקיים."}}, {"@type": "Question", "name": "מה קורה אם הבדיקה מגלה בעיה ברכב?", "acceptedAnswer": {"@type": "Answer", "text": "זה בדיוק הרגע שבו הליווי משתלם. ממצא בטופס בדיקה הוא קלף במשא ומתן — או שמתקנים את המחיר בהתאם, או שממשיכים לרכב הבא. מה שלא קורה זה שתגלו את זה אחרי שחתמתם."}}]}
+{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "כמה זה עולה לי?", "acceptedAnswer": {"@type": "Answer", "text": "שיחת ההיכרות הראשונה היא ללא עלות וללא התחייבות. את התמורה אני מעדיף לסגור איתכם בשיחה, אחרי שאני מבין מה בדיוק אתם צריכים — כך זה הוגן לשני הצדדים. מה שחשוב שתדעו מראש: אני גובה תמורה רק מכם, הלקוחות שלי, ולא מהצד השני לעסקה."}}, {"@type": "Question", "name": "ממי אתה מקבל תשלום?", "acceptedAnswer": {"@type": "Answer", "text": "רק מהלקוח שאני מלווה. אני לא גובה תשלום מהצד השני לעסקה, ואם אי פעם תגיע לי טובת הנאה מגורם אחר — תדעו על כך במפורש לפני סגירת העסקה."}}, {"@type": "Question", "name": "אתה סוחר רכב?", "acceptedAnswer": {"@type": "Answer", "text": "לא. אני יועץ ומלווה בלבד — לא מחזיק תו סוחר, ולא קונה או מוכר רכבים בעצמי. ההמלצה שלי מופנית אליכם, וההחלטה הסופית על העסקה היא תמיד שלכם, על פי שיקול דעתכם."}}, {"@type": "Question", "name": "אני גר בפריפריה — אתה עובד בכל הארץ?", "acceptedAnswer": {"@type": "Answer", "text": "כן. השירות מתנהל בטלפון ובוואטסאפ — אפיון הצרכים, החיפוש, בדיקת מחירים, סינון פניות ומשא ומתן — ולכן הוא לא תלוי במקום שבו אתם גרים."}}, {"@type": "Question", "name": "כמה זמן לוקח למכור רכב?", "acceptedAnswer": {"@type": "Answer", "text": "זה תלוי בדגם, בשנה, במצב הרכב ובמחיר היעד. יש רכבים שנסגרים תוך ימים ויש שלוקחים יותר. בשיחה הראשונה אני אומר לכם הערכה כנה, ולא מבטיח מה שאי אפשר לקיים."}}, {"@type": "Question", "name": "אתה מגיע איתי לבדיקת הרכב?", "acceptedAnswer": {"@type": "Answer", "text": "לא. אני לא מגיע לבדיקה עצמה — אותה עושים במוסך בדיקה מוסמך לבחירתכם. מה שאני עושה זה לאפיין איתכם מה אתם צריכים, לצאת ולחפש את הרכבים המתאימים, ואחרי שיש טופס בדיקה ביד — לשבת עליו ולהשתמש בממצאים כקלף במשא ומתן על המחיר."}}]}
 </script>
 </head>
 
@@ -181,7 +252,7 @@
     <div class="lg:col-span-7 flex flex-col gap-6">
       <p class="inline-flex items-center gap-3 bg-surface-container/70 border border-white/10 rounded-full px-4 py-2 w-fit backdrop-blur-md text-sm font-medium text-on-surface-variant">
         <span aria-hidden="true" class="material-symbols-outlined text-electric-violet text-lg">verified</span>
-        ייעוץ וליווי אישי · תמחור שקוף שנסגר מראש
+        ייעוץ וליווי אישי · אפיון צרכים ואיתור רכבים
       </p>
 
       <h1 class="text-4xl md:text-6xl font-black leading-tight">
@@ -191,14 +262,14 @@
       </h1>
 
       <p class="text-lg text-on-surface-variant leading-relaxed max-w-2xl">
-        אני מנהל בשבילכם את כל התהליך — מהמשא ומתן מול המגרש או היבואן, דרך הבדיקה לפני
-        קנייה, ועד סגירת העסקה. אתם מקבלים מישהו מהצד שלכם, שמכיר את השוק ולא מתבייש
-        להתמקח. העמלה שלי קבועה ונסגרת מראש — בלי הפתעות ובלי אותיות קטנות.
+        אני מנהל בשבילכם את כל התהליך — מאפיון הצרכים והחיפוש, דרך המשא ומתן מול המגרש
+        או היבואן, ועד סגירת העסקה. אתם מקבלים מישהו מהצד שלכם, שמכיר את השוק ולא מתבייש
+        להתמקח.
       </p>
 
       <ul class="flex flex-wrap gap-x-6 gap-y-3 text-base text-on-surface-variant list-none">
         <li class="flex items-center gap-2"><span aria-hidden="true" class="material-symbols-outlined text-cyan-glow text-xl">check_circle</span>משא ומתן מקצועי בשמכם</li>
-        <li class="flex items-center gap-2"><span aria-hidden="true" class="material-symbols-outlined text-cyan-glow text-xl">check_circle</span>ליווי בבדיקה לפני קנייה</li>
+        <li class="flex items-center gap-2"><span aria-hidden="true" class="material-symbols-outlined text-cyan-glow text-xl">check_circle</span>אפיון צרכים ואיתור רכבים</li>
         <li class="flex items-center gap-2"><span aria-hidden="true" class="material-symbols-outlined text-cyan-glow text-xl">check_circle</span>שיחת ייעוץ ראשונה ללא התחייבות</li>
       </ul>
 
@@ -300,7 +371,7 @@
         <h3 class="text-xl font-bold">מכירת הרכב שלכם</h3>
         <p class="text-on-surface-variant leading-relaxed">
           אני מנהל את המכירה מול הקונים והמגרשים: מסנן פניות סרק, מתמודד עם ירידות מחיר
-          על סמך טופס בדיקה, ומביא אותכם למחיר נטו שהסכמנו עליו מראש. <strong class="text-on-surface">העמלה קבועה ונסגרת מראש.</strong>
+          על סמך טופס בדיקה, ומביא אותכם למחיר נטו שהסכמנו עליו מראש.
         </p>
       </article>
 
@@ -308,8 +379,9 @@
         <span aria-hidden="true" class="material-symbols-outlined text-4xl text-electric-violet">search_check</span>
         <h3 class="text-xl font-bold">קניית רכב יד שנייה</h3>
         <p class="text-on-surface-variant leading-relaxed">
-          מאתר רכבים שמתאימים לתקציב ולצרכים, מגיע לבדיקה לפני קנייה, קורא את טופס הבדיקה
-          לעומק — ומשתמש בכל ממצא כדי להוריד מהמחיר. אתם קונים בראש שקט.
+          מאפיין איתכם בדיוק מה אתם צריכים ומה התקציב, יוצא לחפש, ומביא לכם רכבים
+          שמתאימים. את הבדיקה אתם עושים במוסך מוסמך לבחירתכם — ואני משתמש בממצאים
+          שבטופס כדי לשפר את המחיר.
         </p>
       </article>
 
@@ -343,8 +415,8 @@
       </li>
       <li class="bg-surface-container rounded-2xl p-7 border border-white/5 flex flex-col gap-3">
         <span class="text-electric-violet font-black text-3xl">03</span>
-        <h3 class="text-lg font-bold">אני מנהל את המו״מ</h3>
-        <p class="text-on-surface-variant text-base leading-relaxed">שיחות, בדיקות, התמקחות. אתם לא צריכים להתעסק עם אף אחד.</p>
+        <h3 class="text-lg font-bold">אני מחפש ומתמקח</h3>
+        <p class="text-on-surface-variant text-base leading-relaxed">שיחות, איתור, התמקחות. אתם לא צריכים להתעסק עם אף אחד.</p>
       </li>
       <li class="bg-surface-container rounded-2xl p-7 border border-white/5 flex flex-col gap-3">
         <span class="text-electric-violet font-black text-3xl">04</span>
@@ -430,8 +502,8 @@
 
       <dl class="grid grid-cols-2 sm:grid-cols-3 gap-6 mt-4">
         <div class="flex flex-col gap-1">
-          <dt class="text-on-surface-variant text-sm">עמלה</dt>
-          <dd class="text-3xl font-black text-gradient">קבועה מראש</dd>
+          <dt class="text-on-surface-variant text-sm">תמחור</dt>
+          <dd class="text-3xl font-black text-gradient">בשיחה</dd>
         </div>
         <div class="flex flex-col gap-1">
           <dt class="text-on-surface-variant text-sm">שיחת ייעוץ ראשונה</dt>
@@ -456,57 +528,99 @@
   <div class="max-w-container mx-auto">
     <h2 class="text-3xl md:text-5xl font-black mb-4" id="testimonials-title">סיפורים מהשטח</h2>
     <p class="text-lg text-on-surface-variant mb-3 max-w-3xl">כך נראה הליווי בפועל — מקרים אופייניים מתוך העבודה.</p>
-    <p class="text-sm text-on-surface-variant mb-14 max-w-3xl">המקרים נוסחו מחדש ומוצגים להמחשה בלבד, ללא שמות וללא נתונים מדויקים; אין בהם התחייבות לתוצאה דומה.</p>
+    <p class="text-sm text-on-surface-variant mb-14 max-w-3xl">הסיפורים נוסחו מחדש ומוצגים להמחשה בלבד, ללא שמות וללא נתונים מדויקים; אין בהם התחייבות לתוצאה דומה.</p>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
-      <article class="glass-panel rounded-2xl p-7 flex flex-col gap-4">
+      <figure class="glass-panel rounded-2xl p-7 flex flex-col gap-4 m-0">
         <span class="inline-flex items-center gap-2 text-xs font-bold text-cyan-glow bg-cyan-glow/10 border border-cyan-glow/20 rounded-full px-3 py-1.5 w-fit">
           <span aria-hidden="true" class="material-symbols-outlined text-sm">sell</span>
           מכירת רכב
         </span>
-        <p class="text-on-surface-variant leading-relaxed">ניסיתי למכור לבד ביד שנייה ונפלתי רק על סוחרים שניסו לשחוט את המחיר בגלל טופס הבדיקה. אור לקח את המושכות, ניהל את כל השיחות במקומי וסגר עסקה תוך ימים ספורים — במחיר שסיכמנו מראש.</p>
-      </article>
+        <blockquote class="text-on-surface-variant leading-relaxed m-0">ניסיתי למכור לבד ביד שנייה ונפלתי רק על סוחרים שניסו לשחוט את המחיר בגלל טופס הבדיקה. אור לקח את המושכות, ניהל את כל השיחות במקומי וסגר עסקה תוך ימים ספורים — במחיר שסיכמנו מראש.</blockquote>
+        <figcaption class="mt-auto pt-4 border-t border-white/10 flex items-center gap-3">
+          <span aria-hidden="true" class="material-symbols-outlined text-electric-violet text-2xl">account_circle</span>
+          <span class="flex flex-col">
+            <span class="font-bold text-on-surface text-sm">מוכר רכב פרטי · מרכז הארץ</span>
+            <span class="text-xs text-on-surface-variant">מקרה לדוגמה — ללא פרטים מזהים</span>
+          </span>
+        </figcaption>
+      </figure>
 
-      <article class="glass-panel rounded-2xl p-7 flex flex-col gap-4">
+      <figure class="glass-panel rounded-2xl p-7 flex flex-col gap-4 m-0">
         <span class="inline-flex items-center gap-2 text-xs font-bold text-cyan-glow bg-cyan-glow/10 border border-cyan-glow/20 rounded-full px-3 py-1.5 w-fit">
           <span aria-hidden="true" class="material-symbols-outlined text-sm">directions_car</span>
           רכב חדש מיבואן
         </span>
-        <p class="text-on-surface-variant leading-relaxed">רציתי רכב חדש אבל לא היה לי כוח למשחקים מול הסוכנויות. אור ניהל את המיקוח על המחיר ועל חבילת התוספות, והתוצאה הייתה טובה בהרבה מכל הצעה שהצלחתי להשיג לבד.</p>
-      </article>
+        <blockquote class="text-on-surface-variant leading-relaxed m-0">רציתי רכב חדש אבל לא היה לי כוח למשחקים מול הסוכנויות. אור ניהל את המיקוח על המחיר ועל חבילת התוספות, והתוצאה הייתה טובה בהרבה מכל הצעה שהצלחתי להשיג לבד.</blockquote>
+        <figcaption class="mt-auto pt-4 border-t border-white/10 flex items-center gap-3">
+          <span aria-hidden="true" class="material-symbols-outlined text-electric-violet text-2xl">account_circle</span>
+          <span class="flex flex-col">
+            <span class="font-bold text-on-surface text-sm">קניית רכב חדש · גוש דן</span>
+            <span class="text-xs text-on-surface-variant">מקרה לדוגמה — ללא פרטים מזהים</span>
+          </span>
+        </figcaption>
+      </figure>
 
-      <article class="glass-panel rounded-2xl p-7 flex flex-col gap-4">
+      <figure class="glass-panel rounded-2xl p-7 flex flex-col gap-4 m-0">
         <span class="inline-flex items-center gap-2 text-xs font-bold text-cyan-glow bg-cyan-glow/10 border border-cyan-glow/20 rounded-full px-3 py-1.5 w-fit">
           <span aria-hidden="true" class="material-symbols-outlined text-sm">sell</span>
           מכירת רכב
         </span>
-        <p class="text-on-surface-variant leading-relaxed">הגעתי אחרי שעסקה קודמת התפוצצה בבדיקה, בטוח שאני הולך להפסיד הרבה כסף. אור טיפל בהכל במהירות, הביא קונה רציני וסגר בדיוק את מחיר הנטו שרציתי — בראש שקט.</p>
-      </article>
+        <blockquote class="text-on-surface-variant leading-relaxed m-0">הגעתי אחרי שעסקה קודמת התפוצצה בבדיקה, בטוח שאני הולך להפסיד הרבה כסף. אור טיפל בהכל במהירות, הביא קונה רציני וסגר בדיוק את מחיר הנטו שרציתי — בראש שקט.</blockquote>
+        <figcaption class="mt-auto pt-4 border-t border-white/10 flex items-center gap-3">
+          <span aria-hidden="true" class="material-symbols-outlined text-electric-violet text-2xl">account_circle</span>
+          <span class="flex flex-col">
+            <span class="font-bold text-on-surface text-sm">מוכר רכב פרטי · השפלה</span>
+            <span class="text-xs text-on-surface-variant">מקרה לדוגמה — ללא פרטים מזהים</span>
+          </span>
+        </figcaption>
+      </figure>
 
-      <article class="glass-panel rounded-2xl p-7 flex flex-col gap-4">
+      <figure class="glass-panel rounded-2xl p-7 flex flex-col gap-4 m-0">
         <span class="inline-flex items-center gap-2 text-xs font-bold text-cyan-glow bg-cyan-glow/10 border border-cyan-glow/20 rounded-full px-3 py-1.5 w-fit">
           <span aria-hidden="true" class="material-symbols-outlined text-sm">search_check</span>
           קניית יד שנייה
         </span>
-        <p class="text-on-surface-variant leading-relaxed">אני לא מבינה ברכבים ותמיד פחדתי שיסדרו אותי במוסך או בבדיקה. אור ליווה אותי מא׳ ועד ת׳, ישב איתי על טופס הבדיקה והשתמש בכל ממצא כדי לשפר את המחיר. הרגשתי שיש לי גב חזק.</p>
-      </article>
+        <blockquote class="text-on-surface-variant leading-relaxed m-0">אני לא מבינה ברכבים ותמיד פחדתי שיסדרו אותי במוסך או בבדיקה. אור אפיין איתי בדיוק מה אני צריכה, מצא לי רכבים מתאימים, וישב איתי על טופס הבדיקה כדי לשפר את המחיר. הרגשתי שיש לי גב חזק.</blockquote>
+        <figcaption class="mt-auto pt-4 border-t border-white/10 flex items-center gap-3">
+          <span aria-hidden="true" class="material-symbols-outlined text-electric-violet text-2xl">account_circle</span>
+          <span class="flex flex-col">
+            <span class="font-bold text-on-surface text-sm">קניית רכב יד שנייה · מרכז הארץ</span>
+            <span class="text-xs text-on-surface-variant">מקרה לדוגמה — ללא פרטים מזהים</span>
+          </span>
+        </figcaption>
+      </figure>
 
-      <article class="glass-panel rounded-2xl p-7 flex flex-col gap-4">
+      <figure class="glass-panel rounded-2xl p-7 flex flex-col gap-4 m-0">
         <span class="inline-flex items-center gap-2 text-xs font-bold text-cyan-glow bg-cyan-glow/10 border border-cyan-glow/20 rounded-full px-3 py-1.5 w-fit">
           <span aria-hidden="true" class="material-symbols-outlined text-sm">handshake</span>
           ליווי אישי
         </span>
-        <p class="text-on-surface-variant leading-relaxed">שירות הוגן ושקוף, זמין בכל שעה ובלי אותיות קטנות — פשוט מקיים בדיוק את מה שהוא מבטיח.</p>
-      </article>
+        <blockquote class="text-on-surface-variant leading-relaxed m-0">שירות הוגן ושקוף, זמין בכל שעה ובלי אותיות קטנות — פשוט מקיים בדיוק את מה שהוא מבטיח.</blockquote>
+        <figcaption class="mt-auto pt-4 border-t border-white/10 flex items-center gap-3">
+          <span aria-hidden="true" class="material-symbols-outlined text-electric-violet text-2xl">account_circle</span>
+          <span class="flex flex-col">
+            <span class="font-bold text-on-surface text-sm">לקוח ליווי · צפון הארץ</span>
+            <span class="text-xs text-on-surface-variant">מקרה לדוגמה — ללא פרטים מזהים</span>
+          </span>
+        </figcaption>
+      </figure>
 
-      <article class="glass-panel rounded-2xl p-7 flex flex-col gap-4">
+      <figure class="glass-panel rounded-2xl p-7 flex flex-col gap-4 m-0">
         <span class="inline-flex items-center gap-2 text-xs font-bold text-cyan-glow bg-cyan-glow/10 border border-cyan-glow/20 rounded-full px-3 py-1.5 w-fit">
           <span aria-hidden="true" class="material-symbols-outlined text-sm">sell</span>
           מכירת רכב
         </span>
-        <p class="text-on-surface-variant leading-relaxed">מכרתי דרכו שני רכבים של המשפחה. את הראשון סגר מהר מהצפוי, ולשני הביא הצעה ממגרש שבכלל לא חשבתי עליו. חסך לי ימי עבודה ושיחות טלפון מתישות.</p>
-      </article>
+        <blockquote class="text-on-surface-variant leading-relaxed m-0">מכרתי דרכו שני רכבים של המשפחה. את הראשון סגר מהר מהצפוי, ולשני הביא הצעה ממגרש שבכלל לא חשבתי עליו. חסך לי ימי עבודה ושיחות טלפון מתישות.</blockquote>
+        <figcaption class="mt-auto pt-4 border-t border-white/10 flex items-center gap-3">
+          <span aria-hidden="true" class="material-symbols-outlined text-electric-violet text-2xl">account_circle</span>
+          <span class="flex flex-col">
+            <span class="font-bold text-on-surface text-sm">מוכר שני רכבים · הדרום</span>
+            <span class="text-xs text-on-surface-variant">מקרה לדוגמה — ללא פרטים מזהים</span>
+          </span>
+        </figcaption>
+      </figure>
 
     </div>
   </div>
@@ -524,7 +638,7 @@
           <span aria-hidden="true" class="material-symbols-outlined faq-chevron transition-transform text-electric-violet">expand_more</span>
         </summary>
         <p class="px-6 pb-6 text-on-surface-variant leading-relaxed">
-          שיחת ההיכרות הראשונה היא ללא עלות וללא התחייבות. אם מחליטים להתקדם, אני גובה עמלה קבועה מכם — הלקוחות שלי — בסכום שנסגר מראש, לפני שמתחילים. בלי אחוזים נסתרים ובלי הפתעות בסוף הדרך.
+          שיחת ההיכרות הראשונה היא ללא עלות וללא התחייבות. את התמורה אני מעדיף לסגור איתכם בשיחה, אחרי שאני מבין מה בדיוק אתם צריכים — כך זה הוגן לשני הצדדים. מה שחשוב שתדעו מראש: אני גובה תמורה רק מכם, הלקוחות שלי, ולא מהצד השני לעסקה.
         </p>
       </details>
 
@@ -554,7 +668,7 @@
           <span aria-hidden="true" class="material-symbols-outlined faq-chevron transition-transform text-electric-violet">expand_more</span>
         </summary>
         <p class="px-6 pb-6 text-on-surface-variant leading-relaxed">
-          כן. חלק גדול מהתהליך — משא ומתן, בדיקת מחירים, סינון פניות — נעשה בטלפון ובוואטסאפ ולא תלוי במקום. בבדיקות ובמסירה נתאם לפי הצורך.
+          כן. השירות מתנהל בטלפון ובוואטסאפ — אפיון הצרכים, החיפוש, בדיקת מחירים, סינון פניות ומשא ומתן — ולכן הוא לא תלוי במקום שבו אתם גרים.
         </p>
       </details>
 
@@ -570,11 +684,11 @@
 
       <details class="bg-surface-container rounded-xl border border-white/5">
         <summary class="flex justify-between items-center gap-4 p-6 text-lg font-bold min-h-[44px]">
-          מה קורה אם הבדיקה מגלה בעיה ברכב?
+          אתה מגיע איתי לבדיקת הרכב?
           <span aria-hidden="true" class="material-symbols-outlined faq-chevron transition-transform text-electric-violet">expand_more</span>
         </summary>
         <p class="px-6 pb-6 text-on-surface-variant leading-relaxed">
-          זה בדיוק הרגע שבו הליווי משתלם. ממצא בטופס בדיקה הוא קלף במשא ומתן — או שמתקנים את המחיר בהתאם, או שממשיכים לרכב הבא. מה שלא קורה זה שתגלו את זה אחרי שחתמתם.
+          לא. אני לא מגיע לבדיקה עצמה — אותה עושים במוסך בדיקה מוסמך לבחירתכם. מה שאני עושה זה לאפיין איתכם מה אתם צריכים, לצאת ולחפש את הרכבים המתאימים, ואחרי שיש טופס בדיקה ביד — לשבת עליו ולהשתמש בממצאים כקלף במשא ומתן על המחיר.
         </p>
       </details>
     </div>
@@ -610,7 +724,7 @@
     <div class="flex flex-col gap-3 max-w-md">
       <p class="text-2xl font-black">אור זגורי</p>
       <p class="text-on-surface-variant leading-relaxed">
-        ליווי מקצועי בקנייה ומכירה של רכב בישראל. משא ומתן, בדיקות, וסגירת עסקה בראש שקט.
+        ייעוץ וליווי בקנייה ומכירה של רכב בישראל. אפיון צרכים, איתור רכבים, משא ומתן וסגירת עסקה בראש שקט.
       </p>
     </div>
 
@@ -635,7 +749,7 @@
     <a class="text-sm text-on-surface-variant border border-white/10 hover:border-electric-violet/40 hover:text-electric-violet rounded-full px-4 py-2 transition-colors" href="#services">ייעוץ קניית רכב</a>
     <a class="text-sm text-on-surface-variant border border-white/10 hover:border-electric-violet/40 hover:text-electric-violet rounded-full px-4 py-2 transition-colors" href="#services">ליווי מכירת רכב</a>
     <a class="text-sm text-on-surface-variant border border-white/10 hover:border-electric-violet/40 hover:text-electric-violet rounded-full px-4 py-2 transition-colors" href="#services">רכב חדש מיבואן</a>
-    <a class="text-sm text-on-surface-variant border border-white/10 hover:border-electric-violet/40 hover:text-electric-violet rounded-full px-4 py-2 transition-colors" href="#process">בדיקה לפני קנייה</a>
+    <a class="text-sm text-on-surface-variant border border-white/10 hover:border-electric-violet/40 hover:text-electric-violet rounded-full px-4 py-2 transition-colors" href="#process">אפיון צרכים ואיתור רכב</a>
     <a class="text-sm text-on-surface-variant border border-white/10 hover:border-electric-violet/40 hover:text-electric-violet rounded-full px-4 py-2 transition-colors" href="#lead-form">משא ומתן מול מגרש</a>
     <a class="text-sm text-on-surface-variant border border-white/10 hover:border-electric-violet/40 hover:text-electric-violet rounded-full px-4 py-2 transition-colors" href="#lead-form">לא מסתדרים עם המחיר?</a>
   </nav>
@@ -645,9 +759,112 @@
   </p>
 </footer>
 
+
+<!-- ============ ACCESSIBILITY WIDGET ============ -->
+<button aria-controls="a11y-panel" aria-expanded="false" aria-label="פתיחת תפריט נגישות" id="a11y-btn" type="button">
+  <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+    <circle cx="12" cy="12" r="10.6" fill="none" stroke="currentColor" stroke-width="1.6"/>
+    <circle cx="12" cy="6.1" r="1.75" fill="currentColor"/>
+    <path fill="currentColor" d="M12 8.9c-1.9 0-3.5.35-4.8.75-.5.15-.8.6-.8 1.1 0 .6.5 1.1 1.1 1.1.12 0 .28-.02.4-.06.9-.28 1.8-.45 2.7-.53l-1.4 4.9-1.05 3.3c-.2.6.13 1.2.73 1.4.6.18 1.2-.15 1.4-.75l1.72-4.9 1.72 4.9c.2.6.8.93 1.4.75.6-.2.93-.8.73-1.4l-1.05-3.3-1.4-4.9c.9.08 1.8.25 2.7.53.12.04.28.06.4.06.6 0 1.1-.5 1.1-1.1 0-.5-.3-.95-.8-1.1-1.3-.4-2.9-.75-4.8-.75z"/>
+  </svg>
+</button>
+
+<div aria-labelledby="a11y-title" hidden id="a11y-panel" role="dialog">
+  <h2 id="a11y-title">התאמות נגישות</h2>
+  <p class="a11y-sub">ההעדפות נשמרות בדפדפן שלכם.</p>
+
+  <div class="a11y-row">
+    <button class="a11y-opt" data-act="font-dec" type="button">א־ הקטן טקסט</button>
+    <button class="a11y-opt" data-act="font-inc" type="button">א+ הגדל טקסט</button>
+  </div>
+  <p class="a11y-sub" id="a11y-font-state" style="margin:.1rem 0 .7rem">גודל טקסט: 100%</p>
+
+  <button aria-pressed="false" class="a11y-opt" data-cls="a11y-contrast" type="button">
+    <span>ניגודיות גבוהה</span><span aria-hidden="true" class="a11y-state">כבוי</span>
+  </button>
+  <button aria-pressed="false" class="a11y-opt" data-cls="a11y-links" type="button">
+    <span>הדגשת קישורים</span><span aria-hidden="true" class="a11y-state">כבוי</span>
+  </button>
+  <button aria-pressed="false" class="a11y-opt" data-cls="a11y-readable" type="button">
+    <span>גופן קריא</span><span aria-hidden="true" class="a11y-state">כבוי</span>
+  </button>
+  <button aria-pressed="false" class="a11y-opt" data-cls="a11y-nomotion" type="button">
+    <span>עצירת אנימציות</span><span aria-hidden="true" class="a11y-state">כבוי</span>
+  </button>
+
+  <button id="a11y-reset" type="button">איפוס כל ההתאמות</button>
+  <a class="a11y-link" href="accessibility.html">קראו את הצהרת הנגישות המלאה</a>
+</div>
+
 <script>
 (function () {
   "use strict";
+
+  /* ---------- Accessibility widget ---------- */
+  var KEY = "a11y-prefs";
+  var CLASSES = ["a11y-contrast", "a11y-links", "a11y-readable", "a11y-nomotion"];
+  var STEPS = [90, 100, 110, 125, 140, 160];
+  var btn = document.getElementById("a11y-btn");
+  var panel = document.getElementById("a11y-panel");
+  var fontState = document.getElementById("a11y-font-state");
+  var prefs = { font: 100, on: [] };
+
+  try {
+    var saved = JSON.parse(localStorage.getItem(KEY) || "null");
+    if (saved && typeof saved === "object") {
+      prefs.font = STEPS.indexOf(saved.font) > -1 ? saved.font : 100;
+      prefs.on = Array.isArray(saved.on) ? saved.on.filter(function (c) { return CLASSES.indexOf(c) > -1; }) : [];
+    }
+  } catch (e) { /* ignore corrupt storage */ }
+
+  function apply() {
+    document.documentElement.style.fontSize = prefs.font + "%";
+    fontState.textContent = "גודל טקסט: " + prefs.font + "%";
+    CLASSES.forEach(function (c) {
+      var active = prefs.on.indexOf(c) > -1;
+      document.documentElement.classList.toggle(c, active);
+      var b = panel.querySelector('[data-cls="' + c + '"]');
+      if (b) {
+        b.setAttribute("aria-pressed", String(active));
+        b.querySelector(".a11y-state").textContent = active ? "פעיל" : "כבוי";
+      }
+    });
+    try { localStorage.setItem(KEY, JSON.stringify(prefs)); } catch (e) { /* ignore */ }
+  }
+
+  function setPanel(open) {
+    panel.hidden = !open;
+    btn.setAttribute("aria-expanded", String(open));
+    btn.setAttribute("aria-label", open ? "סגירת תפריט נגישות" : "פתיחת תפריט נגישות");
+    if (open) panel.querySelector("button").focus();
+  }
+
+  btn.addEventListener("click", function () { setPanel(panel.hidden); });
+
+  panel.addEventListener("click", function (e) {
+    var t = e.target.closest("button");
+    if (!t) return;
+    if (t.id === "a11y-reset") { prefs = { font: 100, on: [] }; apply(); return; }
+    if (t.dataset.act) {
+      var i = STEPS.indexOf(prefs.font);
+      prefs.font = STEPS[Math.min(STEPS.length - 1, Math.max(0, i + (t.dataset.act === "font-inc" ? 1 : -1)))];
+      apply(); return;
+    }
+    if (t.dataset.cls) {
+      var c = t.dataset.cls, at = prefs.on.indexOf(c);
+      if (at > -1) prefs.on.splice(at, 1); else prefs.on.push(c);
+      apply();
+    }
+  });
+
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape" && !panel.hidden) { setPanel(false); btn.focus(); }
+  });
+  document.addEventListener("click", function (e) {
+    if (!panel.hidden && !panel.contains(e.target) && e.target !== btn && !btn.contains(e.target)) setPanel(false);
+  });
+
+  apply();
 
   /* ===================================================================
      מספר הוואטסאפ שאליו נשלחות הפניות (פורמט בינלאומי, ללא + וללא מקפים).
@@ -741,11 +958,17 @@
     var service = document.getElementById("service").value;
     var notes = document.getElementById("notes").value.trim();
 
+    var TOPIC = {
+      "מכירת רכב": "מכירת הרכב שלי",
+      "קניית יד שנייה": "רכישת רכב יד שנייה",
+      "קניית רכב חדש": "רכישת רכב חדש",
+      "לא בטוח / ייעוץ כללי": "קנייה או מכירה של רכב"
+    };
+
     var msg =
-      "היי אור, הגעתי מהאתר.\n" +
+      "היי אור! אשמח להתייעץ איתך בנוגע ל" + (TOPIC[service] || service) + ".\n\n" +
       "שם: " + name + "\n" +
-      "טלפון: " + phone + "\n" +
-      "מעוניין ב: " + service +
+      "טלפון: " + phone +
       (notes ? "\nהערות: " + notes : "");
 
     status.className = "text-sm text-cyan-glow text-center min-h-[1.25rem]";
